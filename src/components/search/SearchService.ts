@@ -1,10 +1,13 @@
 
-import { SearchItem, SearchResultGroup } from "./types";
+import { SearchItem, SearchResultGroup, SearchItemType } from "./types";
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type FuseInstance = any;
 
 const FUSE_OPTIONS = {
   includeScore: true,
   shouldSort: true,
-  threshold: 0.3, // Typo tolerance (0.0 perfect match, 1.0 anything matches)
+  threshold: 0.3,
   location: 0,
   distance: 100,
   maxPatternLength: 32,
@@ -16,16 +19,8 @@ const FUSE_OPTIONS = {
   ]
 };
 
-// Replace Turkish characters to ensure better matching if needed, 
-// though Fuse handles exact unicode if typed. Sometimes normalizing helps.
-const normalizeString = (str: string) => {
-  return str.toLocaleLowerCase("tr-TR")
-    .replace(/ğ/g, "g").replace(/ü/g, "u").replace(/ş/g, "s")
-    .replace(/ı/g, "i").replace(/ö/g, "o").replace(/ç/g, "c");
-};
-
 export class SearchService {
-  private fuse: any = null;
+  private fuse: FuseInstance = null;
   private items: SearchItem[] = [];
 
   async init(items: SearchItem[]) {
@@ -43,7 +38,7 @@ export class SearchService {
     const results = this.fuse.search(query);
     
     // Extract and map score
-    return results.map((result: any) => ({
+    return results.map((result: { item: SearchItem; score?: number }) => ({
       ...result.item,
       score: result.score
     }));
@@ -65,7 +60,7 @@ export class SearchService {
     order.forEach(type => {
       if (groups[type] && groups[type].length > 0) {
         orderedGroups.push({
-          type: type as any,
+          type: type as SearchItemType,
           title: this.getGroupTitle(type),
           items: groups[type]
         });

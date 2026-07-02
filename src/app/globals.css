@@ -34,15 +34,37 @@
   --spacing-4xl: 8rem;
   --spacing-section: 10rem;
 
+  /* Restore standard Tailwind max-width values that get overridden by spacing tokens */
+  --max-width-xs: 20rem;
+  --max-width-sm: 24rem;
+  --max-width-md: 28rem;
+  --max-width-lg: 32rem;
+  --max-width-xl: 36rem;
+  --max-width-2xl: 42rem;
+  --max-width-3xl: 48rem;
+  --max-width-4xl: 56rem;
+  --max-width-5xl: 64rem;
+  --max-width-6xl: 72rem;
+  --max-width-7xl: 80rem;
+
+  /* Restore standard Tailwind width values */
+  --width-xs: 20rem;
+  --width-sm: 24rem;
+  --width-md: 28rem;
+  --width-lg: 32rem;
+  --width-xl: 36rem;
+  --width-2xl: 42rem;
+  --width-3xl: 48rem;
+  --width-4xl: 56rem;
+  --width-5xl: 64rem;
+  --width-6xl: 72rem;
+  --width-7xl: 80rem;
+
   /* Radius Tokens */
   --radius-soft: 0.5rem;
-  
+
   /* Shadow Tokens */
   --shadow-luxury: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-
-  /* Container Widths */
-  --container-base: 1200px;
-  --container-wide: 1600px;
 
   /* Custom Animations */
   --animate-scroll-indicator: scroll-indicator 2s cubic-bezier(0.8, 0, 0.2, 1) infinite;
@@ -72,6 +94,16 @@
   --animate-scroll-line: scroll-line 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
 }
 
+@utility container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+@utility container-wide {
+  max-width: 1600px;
+  margin-inline: auto;
+}
+
 @layer base {
   :root {
     --background: var(--color-charcoal-950);
@@ -84,27 +116,25 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* Lenis smooth scrolling prevents native scrollbars from shifting layout sometimes */
-    overflow-x: hidden;
   }
 
-  /* Lenis default styles */
+  /* Lenis smooth scrolling */
   html.lenis, html.lenis body {
     height: auto;
   }
-  
+
   .lenis.lenis-smooth {
     scroll-behavior: auto !important;
   }
-  
+
   .lenis.lenis-smooth [data-lenis-prevent] {
     overscroll-behavior: contain;
   }
-  
+
   .lenis.lenis-stopped {
     overflow: hidden;
   }
-  
+
   .lenis.lenis-smooth iframe {
     pointer-events: none;
   }

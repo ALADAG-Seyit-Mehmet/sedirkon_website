@@ -28,9 +28,15 @@ export function MediaProvider({ children }: { children: React.ReactNode }) {
     []
   );
 
+  const updateHash = useCallback((index: number) => {
+    const currentItem = items[index];
+    if (currentItem && galleryId && typeof window !== "undefined") {
+      window.history.replaceState({ lightbox: true }, "", `#${galleryId}-${currentItem.id}`);
+    }
+  }, [items, galleryId]);
+
   const closeMedia = useCallback(() => {
     setIsOpen(false);
-    // Remove hash
     if (typeof window !== "undefined") {
       const url = new URL(window.location.href);
       url.hash = "";
@@ -41,7 +47,6 @@ export function MediaProvider({ children }: { children: React.ReactNode }) {
   const nextMedia = useCallback(() => {
     setCurrentIndex((prev) => {
       const newIndex = (prev + 1) % items.length;
-      updateHash(newIndex);
       return newIndex;
     });
   }, [items.length]);
@@ -49,26 +54,21 @@ export function MediaProvider({ children }: { children: React.ReactNode }) {
   const prevMedia = useCallback(() => {
     setCurrentIndex((prev) => {
       const newIndex = (prev - 1 + items.length) % items.length;
-      updateHash(newIndex);
       return newIndex;
     });
   }, [items.length]);
 
   const setIndex = useCallback((index: number) => {
     setCurrentIndex(index);
-    updateHash(index);
   }, []);
 
-  const updateHash = (index: number) => {
-    const currentItem = items[index];
-    if (currentItem && galleryId && typeof window !== "undefined") {
-      window.history.replaceState({ lightbox: true }, "", `#${galleryId}-${currentItem.id}`);
-    }
-  };
+  useEffect(() => {
+    updateHash(currentIndex);
+  }, [currentIndex, updateHash]);
 
   // Listen to browser back button (popstate)
   useEffect(() => {
-    const handlePopState = (e: PopStateEvent) => {
+    const handlePopState = () => {
       if (isOpen) {
         // User clicked back button, we should close the lightbox instead of navigating
         closeMedia();

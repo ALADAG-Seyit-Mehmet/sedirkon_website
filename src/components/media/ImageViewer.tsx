@@ -5,7 +5,6 @@ import { useSpring, animated } from "@react-spring/web";
 import { usePinch, useDrag } from "@use-gesture/react";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { MediaAsset, useMedia } from "./MediaContext";
-import gsap from "gsap";
 
 export function ImageViewer({ item }: { item: MediaAsset }) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -26,7 +25,7 @@ export function ImageViewer({ item }: { item: MediaAsset }) {
   }, [item.id, api]);
 
   // Handle Drag (Pan) and Swipe
-  const bindDrag = useDrag(({ active, movement: [mx, my], direction: [dx], velocity: [vx], cancel, tap }) => {
+  const bindDrag = useDrag(({ active, movement: [mx, my], direction: [dx], velocity: [vx], tap }) => {
     if (tap) return; // ignore simple taps
     
     // If zoomed out/normal, allow swipe to change image or pull down to close
@@ -69,7 +68,7 @@ export function ImageViewer({ item }: { item: MediaAsset }) {
   });
 
   // Handle Double Click to zoom
-  const handleDoubleClick = (e: React.MouseEvent) => {
+  const handleDoubleClick = () => {
     const currentScale = scale.get();
     if (currentScale > 1) {
       api.start({ x: 0, y: 0, scale: 1 });

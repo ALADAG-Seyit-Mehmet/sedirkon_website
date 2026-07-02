@@ -3,7 +3,7 @@ import { FadeIn } from "@/components/motion/FadeIn";
 
 export function Assembly() {
   return (
-    <section className="w-full py-[15vh] px-md md:px-xl container mx-auto bg-charcoal-950 flex flex-col items-center">
+    <section className="w-full py-3xl md:py-section px-md md:px-xl container mx-auto bg-charcoal-950 flex flex-col items-center">
       
       <div className="text-center mb-xl">
         <FadeIn delay={0.2}>

@@ -23,17 +23,27 @@ export function SearchResults() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
-  // Flatten results for keyboard navigation
-  const flatItems = query.trim() === "" 
-    ? recentSearches 
+  const flatItems = query.trim() === ""
+    ? recentSearches
     : results.flatMap(group => group.items);
 
-  // Reset selected index when query changes
+  const handleSelect = (item: SearchItemType, position: number) => {
+    addRecentSearch(item);
+    trackSelect(item, position);
+
+    if (item.actionType === "copy") {
+      navigator.clipboard.writeText(window.location.href);
+    } else {
+      router.push(item.url);
+    }
+    closeSearch();
+  };
+
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setSelectedIndex(0);
   }, [query]);
 
-  // Handle Keyboard Navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (flatItems.length === 0) return;
@@ -52,9 +62,9 @@ export function SearchResults() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [flatItems, selectedIndex]);
 
-  // Prefetch hovered/focused item
   useEffect(() => {
     if (flatItems.length > 0 && selectedIndex >= 0 && selectedIndex < flatItems.length) {
       const activeItem = flatItems[selectedIndex];
@@ -64,7 +74,6 @@ export function SearchResults() {
     }
   }, [selectedIndex, flatItems, router]);
 
-  // Scroll active item into view
   useEffect(() => {
     if (scrollContainerRef.current) {
       const activeEl = scrollContainerRef.current.querySelector('[data-selected="true"]') as HTMLElement;
@@ -73,19 +82,6 @@ export function SearchResults() {
       }
     }
   }, [selectedIndex]);
-
-  const handleSelect = (item: SearchItemType, position: number) => {
-    addRecentSearch(item);
-    trackSelect(item, position);
-    
-    if (item.actionType === "copy") {
-      navigator.clipboard.writeText(window.location.href);
-      // Optional: show a toast here
-    } else {
-      router.push(item.url);
-    }
-    closeSearch();
-  };
 
   if (query.trim() === "" && recentSearches.length === 0) {
     return (
@@ -98,7 +94,7 @@ export function SearchResults() {
   if (query.trim() !== "" && results.length === 0) {
     return (
       <div className="flex-1 p-8 text-center text-cream-500/40 font-sans text-sm flex flex-col items-center justify-center">
-        Sonuç bulunamadı: <span className="text-cream-500">"{query}"</span>
+        Sonuç bulunamadı: <span className="text-cream-500">&quot;{query}&quot;</span>
       </div>
     );
   }

@@ -2,8 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useMedia } from "./MediaContext";
-import { X, ZoomIn, Info, Share2, ChevronLeft, ChevronRight } from "lucide-react";
-import gsap from "gsap";
+import { X, Info, ChevronLeft, ChevronRight } from "lucide-react";
 
 export function MediaToolbar() {
   const { closeMedia, items, currentIndex, nextMedia, prevMedia } = useMedia();

@@ -20,7 +20,7 @@ export default function Showroom() {
   return (
     <section 
       id="koleksiyon" 
-      className="relative w-full h-screen bg-charcoal-900 flex flex-col md:flex-row items-center overflow-hidden"
+      className="relative w-full min-h-screen md:h-screen bg-charcoal-900 flex flex-col md:flex-row items-center overflow-hidden"
     >
       {/* 3D Canvas Area */}
       <div className="w-full h-[60vh] md:h-screen md:w-2/3 relative order-2 md:order-1 cursor-grab active:cursor-grabbing">
@@ -28,7 +28,7 @@ export default function Showroom() {
       </div>
 
       {/* Typography Overlay / Text Section */}
-      <div className="w-full md:w-1/3 h-[40vh] md:h-screen flex flex-col justify-center px-md md:px-xl z-10 order-1 md:order-2 bg-charcoal-900/50 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none">
+      <div className="w-full md:w-1/3 py-xl md:py-0 md:h-screen flex flex-col justify-center px-md md:px-xl z-10 order-1 md:order-2 bg-charcoal-900/50 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none">
         <RevealText 
           text="Minimalist Çizgi," 
           as="h2" 

@@ -8,7 +8,7 @@ export function ClientTestimonial({ testimonial }: ClientTestimonialProps) {
   if (!testimonial) return null;
 
   return (
-    <section className="w-full py-[20vh] px-md md:px-xl bg-charcoal-900 flex items-center justify-center">
+    <section className="w-full py-4xl md:py-section px-md md:px-xl bg-charcoal-900 flex items-center justify-center">
       <div className="container mx-auto max-w-4xl text-center relative">
         
         {/* Large Decorative Quotes */}
@@ -18,7 +18,7 @@ export function ClientTestimonial({ testimonial }: ClientTestimonialProps) {
 
         <FadeIn delay={0.3} duration={2}>
           <blockquote className="relative z-10 font-serif text-2xl md:text-4xl lg:text-5xl text-cream-500 leading-snug tracking-wide italic">
-            "{testimonial}"
+            &ldquo;{testimonial}&rdquo;
           </blockquote>
         </FadeIn>
 

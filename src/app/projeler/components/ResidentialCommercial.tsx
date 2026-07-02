@@ -13,11 +13,11 @@ export function ResidentialCommercial({ projects }: ResidentialCommercialProps) 
   const commercial = projects.find(p => p.category === "Commercial");
 
   return (
-    <section className="w-full bg-charcoal-950 flex flex-col gap-0 pb-[15vh]">
+    <section className="w-full bg-charcoal-950 flex flex-col gap-0 pb-3xl md:pb-section">
       
       {/* Residential - Edge to Edge */}
       {residential && (
-        <div className="w-full relative py-[15vh]">
+        <div className="w-full relative py-3xl md:py-section">
           <div className="container mx-auto px-md md:px-xl mb-2xl">
             <RevealText 
               text="Bireysel Yaşam Alanları" 
@@ -56,7 +56,7 @@ export function ResidentialCommercial({ projects }: ResidentialCommercialProps) 
 
       {/* Commercial - Asymmetric Editorial Layout */}
       {commercial && (
-        <div className="w-full py-[10vh] container mx-auto px-md md:px-xl">
+        <div className="w-full py-3xl md:py-4xl container mx-auto px-md md:px-xl">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-xl md:gap-4xl items-center">
             
             <div className="md:col-span-5 order-2 md:order-1 flex flex-col justify-center">

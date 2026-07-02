@@ -6,12 +6,13 @@ export interface SearchAnalyticsAdapter {
 }
 
 export class NoOpAnalyticsAdapter implements SearchAnalyticsAdapter {
-  trackSearch(query: string, resultCount: number): void {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  trackSearch(_query: string, _resultCount: number): void {
     // Analytics is intentionally disabled by default to respect privacy.
-    // Implement a custom adapter (e.g. PostHog, Google Analytics) and replace this.
   }
 
-  trackSelect(item: SearchItem, query: string, position: number): void {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  trackSelect(_item: SearchItem, _query: string, _position: number): void {
     // No-op
   }
 }

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef } from "react";
-import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { cn } from "@/lib/utils";
@@ -20,7 +19,7 @@ export function SectionTransition({
   pin = false,
   ...rest
 }: SectionTransitionProps) {
-  const containerRef = useRef<any>(null);
+  const containerRef = useRef<HTMLElement>(null);
 
   useGSAP(() => {
     if (!containerRef.current) return;

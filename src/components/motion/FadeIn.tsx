@@ -19,7 +19,7 @@ export function FadeIn({
   scrollTrigger = true,
   ...rest
 }: FadeInProps) {
-  const ref = useReveal({ type: "fade", duration, delay, ease, scrollTrigger }) as React.RefObject<any>;
+  const ref = useReveal({ type: "fade", duration, delay, ease, scrollTrigger }) as React.RefObject<HTMLElement>;
 
   return React.createElement(
     Component,

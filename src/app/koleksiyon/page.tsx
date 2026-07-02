@@ -44,7 +44,7 @@ export default async function CollectionPage(props: { searchParams?: Promise<{ k
               <Link 
                 key={cat.id} 
                 href={cat.id === "all" ? "/koleksiyon" : `/koleksiyon?kategori=${cat.id}`}
-                className={`px-md py-xs rounded-pill font-sans text-sm tracking-wide transition-colors duration-500 ${
+                className={`px-md py-xs rounded-full font-sans text-sm tracking-wide transition-colors duration-500 ${
                   currentCategory === cat.id 
                     ? "bg-cream-500 text-charcoal-950" 
                     : "border border-cream-500/20 text-cream-500/70 hover:text-cream-500 hover:border-cream-500"
@@ -57,19 +57,19 @@ export default async function CollectionPage(props: { searchParams?: Promise<{ k
         </FadeIn>
       </section>
 
-      {/* Grid (Editorial layout, asymmetrical) */}
+      {/* Grid (Editorial layout, asymmetrical masonry) */}
       <section className="container mx-auto px-md md:px-xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-xl gap-y-4xl">
+        <div className="columns-1 md:columns-2 gap-x-xl md:gap-x-24">
           {filteredProducts.map((product, index) => {
-            // Create an asymmetrical layout (some items pushed down)
-            const isEven = index % 2 === 0;
-            const marginTop = !isEven ? "md:mt-4xl" : "";
+            // Dergi (editorial) hissi için resim oranlarını dönüşümlü kullanıyoruz
+            const isPortrait = index % 2 !== 0;
+            const aspectClass = isPortrait ? "aspect-3/4" : "aspect-4/3";
 
             return (
-              <FadeIn key={product.id} delay={0.2 + (index * 0.1)} duration={1.2} className={marginTop}>
+              <FadeIn key={product.id} delay={0.2 + ((index % 4) * 0.1)} duration={1.2} className="break-inside-avoid mb-16 md:mb-24">
                 <Link href={`/koleksiyon/${product.slug}`} isFlip={true} className="group block">
-                  {/* Image wrapper with aspect ratio */}
-                  <div className="w-full aspect-[4/5] md:aspect-square overflow-hidden bg-charcoal-900 relative">
+                  {/* Image wrapper with alternating aspect ratio */}
+                  <div className={`w-full ${aspectClass} overflow-hidden bg-charcoal-900 relative`}>
                     <SmartImage
                       src={product.images[0]}
                       alt={product.title}

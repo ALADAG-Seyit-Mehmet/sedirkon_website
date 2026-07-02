@@ -1,10 +1,9 @@
-import { SmartImage } from "@/components/ui/SmartImage";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { RevealText } from "@/components/motion/RevealText";
 
 export function WoodDrying() {
   return (
-    <section className="w-full py-[15vh] bg-charcoal-900 border-y border-charcoal-800">
+    <section className="w-full py-3xl md:py-section bg-charcoal-900 border-y border-charcoal-800">
       <div className="container mx-auto px-md md:px-xl text-center max-w-4xl">
         
         <FadeIn delay={0.2} duration={2}>
@@ -27,7 +26,7 @@ export function WoodDrying() {
 
         <FadeIn delay={0.6} duration={2}>
           <p className="text-cream-500/70 font-sans text-xl md:text-2xl font-light leading-relaxed italic">
-            "Fırınlanmış ahşap hızlıdır ama doğal kurutma ruhu korur."
+            &ldquo;Fırınlanmış ahşap hızlıdır ama doğal kurutma ruhu korur.&rdquo;
           </p>
           <div className="w-12 h-[1px] bg-bronze-500 mx-auto my-xl" />
           <p className="text-cream-500/60 font-sans text-lg font-light leading-relaxed">

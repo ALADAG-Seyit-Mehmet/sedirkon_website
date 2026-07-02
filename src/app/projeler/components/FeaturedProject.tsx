@@ -12,7 +12,7 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
   if (!project) return null;
 
   return (
-    <section className="w-full py-[15vh] bg-charcoal-950">
+    <section className="w-full py-3xl md:py-section bg-charcoal-950">
       
       {/* Featured Banner */}
       <div className="container mx-auto px-md md:px-xl mb-xl">

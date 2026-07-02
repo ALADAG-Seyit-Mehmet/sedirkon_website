@@ -29,11 +29,13 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     gsap.ticker.lagSmoothing(0);
 
     // Expose lenis globally to stop/start during loading sequences
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).lenis = lenis;
 
     return () => {
       gsap.ticker.remove(updateLenis);
       lenis.destroy();
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       delete (window as any).lenis;
     };
   }, []);

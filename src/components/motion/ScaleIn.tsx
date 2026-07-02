@@ -19,7 +19,7 @@ export function ScaleIn({
   scrollTrigger = true,
   ...rest
 }: ScaleInProps) {
-  const ref = useReveal({ type: "scale", duration, delay, ease, scrollTrigger }) as React.RefObject<any>;
+  const ref = useReveal({ type: "scale", duration, delay, ease, scrollTrigger }) as React.RefObject<HTMLElement>;
 
   return React.createElement(
     Component,

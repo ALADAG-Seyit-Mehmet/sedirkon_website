@@ -18,11 +18,11 @@ export function MaskReveal({
   delay,
   ease,
   scrollTrigger = true,
-  direction, // Accept but ignore functionally for now, or you can implement it in useReveal if needed
+  direction = "bottom-to-top",
   ...rest
 }: MaskRevealProps) {
   // Use mask type. Expects the immediate children to be animated.
-  const ref = useReveal({ type: "mask", duration, delay, ease, scrollTrigger }) as React.RefObject<any>;
+  const ref = useReveal({ type: "mask", duration, delay, ease, scrollTrigger, direction }) as React.RefObject<HTMLElement>;
 
   return React.createElement(
     Component,

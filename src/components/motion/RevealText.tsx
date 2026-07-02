@@ -22,7 +22,7 @@ export function RevealText({
   ...rest
 }: RevealTextProps) {
   // Use 'text' type in useReveal, which looks for children inside the ref
-  const ref = useReveal({ type: "text", duration, delay, stagger, ease, scrollTrigger }) as React.RefObject<any>;
+  const ref = useReveal({ type: "text", duration, delay, stagger, ease, scrollTrigger }) as React.RefObject<HTMLElement>;
 
   // Split text by words, wrap each in an overflow-hidden wrapper to simulate line-by-line reveal
   const words = useMemo(() => text.split(" "), [text]);
@@ -31,11 +31,11 @@ export function RevealText({
     Component,
     {
       ref,
-      className: cn("flex flex-wrap", className),
+      className: cn("flex flex-wrap gap-y-1", className),
       ...rest
     },
     words.map((word, idx) => (
-      <span key={idx} className="overflow-hidden inline-flex pb-1 mr-[0.25em]">
+      <span key={idx} className="overflow-hidden inline-flex mr-[0.3em]">
         <span className="will-change-transform inline-block">
           {word}
         </span>

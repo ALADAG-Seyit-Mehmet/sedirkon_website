@@ -31,9 +31,9 @@ export function PhilosophySection({ product }: PhilosophySectionProps) {
         <div className="hidden md:block">
           <FadeIn delay={0.6} duration={1.5}>
             <p className="text-4xl lg:text-5xl font-serif text-cream-500/20 leading-tight italic">
-              "Zamansızlık, <br/>
+              &ldquo;Zamansızlık, <br/>
               <span className="text-cream-500/40">ustalığın sessizliğinde</span> <br/>
-              gizlidir."
+              gizlidir.&rdquo;
             </p>
           </FadeIn>
         </div>

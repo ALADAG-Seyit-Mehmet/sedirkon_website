@@ -9,7 +9,6 @@ import { useMedia, MediaAsset } from "@/components/media/MediaContext";
 import { useCursor } from "@/components/interactions/CursorContext";
 import { ImageMotion } from "@/components/interactions/ImageMotion";
 import { Project } from "@/lib/data";
-import { Maximize2 } from "lucide-react";
 
 interface MacroInteriorProps {
   project: Project;
@@ -51,13 +50,13 @@ export function MacroInterior({ project }: MacroInteriorProps) {
   }));
 
   return (
-    <section ref={containerRef} className="py-[10vh] border-t border-cream-500/10">
+    <section ref={containerRef} className="py-3xl md:py-4xl border-t border-cream-500/10">
       <div className="container mx-auto px-md md:px-xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-xl md:gap-4xl">
           {project.macroImages.map((img, idx) => (
             <FadeIn key={idx} delay={0.2 * idx} className={idx === 1 ? "md:mt-4xl" : ""}>
               <div 
-                className="w-full aspect-[3/4] md:aspect-square bg-charcoal-900 relative overflow-hidden group"
+                className="w-full aspect-3/4 md:aspect-square bg-charcoal-900 relative overflow-hidden group"
                 onMouseEnter={() => setCursorType("zoom")}
                 onMouseLeave={() => setCursorType("default")}
                 onClick={(e) => openMedia(galleryItems, idx, `project-${project.id}-macro`, e.currentTarget)}

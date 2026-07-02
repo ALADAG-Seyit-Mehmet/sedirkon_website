@@ -4,7 +4,7 @@ import { RevealText } from "@/components/motion/RevealText";
 
 export function HandCraftsmanship() {
   return (
-    <section className="w-full py-[20vh] px-md md:px-xl bg-charcoal-900">
+    <section className="w-full py-4xl md:py-section px-md md:px-xl bg-charcoal-900">
       <div className="container mx-auto">
         
         {/* Title Centered */}

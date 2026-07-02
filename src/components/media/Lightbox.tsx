@@ -14,21 +14,18 @@ export function Lightbox() {
   const contentRef = useRef<HTMLDivElement>(null);
   const [isMounted, setIsMounted] = useState(false);
 
-  // We mount the component when isOpen is true, and unmount after animation when false
   useEffect(() => {
     if (isOpen) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsMounted(true);
-      
-      // Stop body scrolling
       document.body.style.overflow = "hidden";
 
-      // Animate in
       gsap.to(overlayRef.current, {
         opacity: 1,
         duration: 0.6,
         ease: "power3.out",
       });
-      
+
       gsap.to(contentRef.current, {
         opacity: 1,
         scale: 1,
@@ -36,16 +33,14 @@ export function Lightbox() {
         ease: "power3.out",
         delay: 0.1,
       });
-
     } else if (isMounted) {
-      // Animate out
       gsap.to(contentRef.current, {
         opacity: 0,
         scale: 0.98,
         duration: 0.4,
         ease: "power2.in",
       });
-      
+
       gsap.to(overlayRef.current, {
         opacity: 0,
         duration: 0.5,
@@ -56,9 +51,8 @@ export function Lightbox() {
         }
       });
     }
-    
+
     return () => {
-      // Cleanup in case unmounted abruptly
       if (isOpen) document.body.style.overflow = "";
     };
   }, [isOpen, isMounted]);

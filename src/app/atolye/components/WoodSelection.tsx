@@ -5,7 +5,7 @@ import { MaskReveal } from "@/components/motion/MaskReveal";
 
 export function WoodSelection() {
   return (
-    <section className="w-full py-[20vh] px-md md:px-xl container mx-auto bg-charcoal-950">
+    <section className="w-full py-4xl md:py-section px-md md:px-xl container mx-auto bg-charcoal-950">
       
       <div className="grid grid-cols-1 md:grid-cols-12 gap-2xl md:gap-4xl items-center">
         

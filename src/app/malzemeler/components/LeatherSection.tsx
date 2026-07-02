@@ -5,7 +5,7 @@ import { MaskReveal } from "@/components/motion/MaskReveal";
 
 export function LeatherSection() {
   return (
-    <section className="w-full py-[15vh] bg-charcoal-900 border-y border-charcoal-800">
+    <section className="w-full py-3xl md:py-section bg-charcoal-900 border-y border-charcoal-800">
       <div className="container mx-auto px-md md:px-xl">
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2xl md:gap-4xl items-center">

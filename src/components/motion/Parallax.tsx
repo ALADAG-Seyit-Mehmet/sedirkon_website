@@ -18,7 +18,7 @@ export function Parallax({
   as: Component = "div",
   ...rest
 }: ParallaxProps) {
-  const ref = useParallax({ speed }) as React.RefObject<any>;
+  const ref = useParallax({ speed }) as React.RefObject<HTMLElement>;
 
   return React.createElement(
     Component,

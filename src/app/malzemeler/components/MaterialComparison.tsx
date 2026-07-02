@@ -10,7 +10,7 @@ const MATERIALS = [
 
 export function MaterialComparison() {
   return (
-    <section className="w-full py-[15vh] px-md md:px-xl bg-charcoal-950">
+    <section className="w-full py-3xl md:py-section px-md md:px-xl bg-charcoal-950">
       <div className="container mx-auto max-w-5xl">
         
         <div className="text-center mb-4xl">

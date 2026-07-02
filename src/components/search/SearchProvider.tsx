@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { SearchContext } from "./SearchContext";
 import { SearchItem, SearchResultGroup } from "./types";
 import { LocalDataAdapter } from "./LocalDataAdapter";
@@ -41,11 +41,11 @@ export function SearchProvider({ children }: { children: React.ReactNode }) {
     initSearch();
   }, []);
 
-  // Handle Query Changes
   useEffect(() => {
     if (!isReady) return;
-    
+
     if (query.trim() === "") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setResults([]);
       return;
     }
@@ -53,18 +53,19 @@ export function SearchProvider({ children }: { children: React.ReactNode }) {
     const searchResults = searchService.search(query);
     const grouped = searchService.groupResults(searchResults);
     setResults(grouped);
-    
-    // Log analytics (disabled by default)
+
     analytics.trackSearch(query, searchResults.length);
   }, [query, isReady]);
 
-  // Handle Local Storage for Recent Searches
   useEffect(() => {
     const stored = localStorage.getItem("sedirkon_recent_searches");
     if (stored) {
       try {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setRecentSearches(JSON.parse(stored));
-      } catch (e) {}
+      } catch {
+        // ignore parse errors
+      }
     }
   }, []);
 

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useCallback, useEffect } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { TransitionContext } from "./TransitionContext";
 import { TransitionOverlay } from "./TransitionOverlay";
 
@@ -10,46 +10,48 @@ export function TransitionProvider({ children }: { children: React.ReactNode }) 
   const [isLongLoading, setIsLongLoading] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   // Scroll Restoration state
   const [scrollPositions, setScrollPositions] = useState<Record<string, number>>({});
 
   useEffect(() => {
-    // When pathname changes (navigation complete)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsTransitioning(false);
     setIsLongLoading(false);
 
-    // Handle scroll
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    
+
     setTimeout(() => {
-      // If we have a saved scroll position for this path, restore it, otherwise top
-      const savedPosition = scrollPositions[pathname];
+      // Create a unique key using both pathname and searchParams
+      const currentUrl = `${pathname}${searchParams ? `?${searchParams.toString()}` : ''}`;
+      const savedPosition = scrollPositions[currentUrl];
       if (savedPosition !== undefined) {
         window.scrollTo({ top: savedPosition, behavior: prefersReducedMotion ? "auto" : "smooth" });
       } else {
         window.scrollTo(0, 0);
       }
-    }, 50); // slight delay to ensure DOM is ready
-    
-  }, [pathname]);
+    }, 50);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname, searchParams?.toString()]);
 
   // Save scroll position before leaving
   useEffect(() => {
     const handleScroll = () => {
+      const currentUrl = `${pathname}${searchParams ? `?${searchParams.toString()}` : ''}`;
       setScrollPositions(prev => ({
         ...prev,
-        [pathname]: window.scrollY
+        [currentUrl]: window.scrollY
       }));
     };
     
     // Throttle or debounce would be better for production, using generic listener for now
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [pathname]);
+  }, [pathname, searchParams?.toString()]);
 
 
-  const navigate = useCallback((href: string, options?: { isFlip?: boolean; flipTargetId?: string }) => {
+  const navigate = useCallback((href: string) => {
     if (href === pathname) return;
     
     setIsTransitioning(true);

@@ -17,37 +17,25 @@ export function CursorProvider({ children }: { children: React.ReactNode }) {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
-    // Detect if the device has a fine pointer (mouse/trackpad)
     const mediaQuery = window.matchMedia("(pointer: fine)");
-    
-    // Detect explicit touch capability
-    const checkTouch = () => {
-      setIsTouchDevice(
-        "ontouchstart" in window ||
-        navigator.maxTouchPoints > 0 ||
-        !mediaQuery.matches
-      );
-    };
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    checkTouch();
+    const touch =
+      prefersReducedMotion ||
+      "ontouchstart" in window ||
+      navigator.maxTouchPoints > 0 ||
+      !mediaQuery.matches;
 
-    // If it's not a touch device, hide default cursor on the whole body when moving
-    // We only hide default cursor when we are sure the custom cursor is active
-    if (!isTouchDevice) {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setIsTouchDevice(touch);
+
+    if (!touch) {
       document.documentElement.classList.add("custom-cursor-active");
     }
 
     return () => {
       document.documentElement.classList.remove("custom-cursor-active");
     };
-  }, [isTouchDevice]);
-
-  // Global override for prefers-reduced-motion
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReducedMotion) {
-      setIsTouchDevice(true); // Disable custom cursor physics entirely
-    }
   }, []);
 
   return (

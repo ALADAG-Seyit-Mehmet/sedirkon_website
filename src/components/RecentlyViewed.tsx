@@ -28,6 +28,7 @@ export function RecentlyViewed({ currentProductId }: RecentlyViewedProps) {
       .map(id => MOCK_PRODUCTS.find(p => p.id === id))
       .filter((p): p is Product => p !== undefined);
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setRecentProducts(productsToDisplay);
   }, [currentProductId]);
 

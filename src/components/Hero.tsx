@@ -34,7 +34,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 container mx-auto px-md md:px-xl flex flex-col items-center text-center mt-4xl">
+      <div className="relative z-20 container mx-auto px-md md:px-xl flex flex-col items-center text-center">
         <RevealText 
           text="Ahşabın Ruhu," 
           as="h1" 
@@ -80,8 +80,8 @@ export default function Hero() {
         </div>
 
         <FadeIn delay={2.8} duration={1} scrollTrigger={false}>
-          <div className="absolute bottom-2xl left-1/2 -translate-x-1/2 overflow-hidden mx-auto hidden md:block">
-            <div className="w-[1px] h-xl bg-cream-500/20 mx-auto relative overflow-hidden">
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 overflow-hidden mx-auto hidden md:block">
+            <div className="w-px h-xl bg-cream-500/20 mx-auto relative overflow-hidden">
                <div className="absolute top-0 left-0 w-full h-full bg-cream-500 origin-top animate-scroll-indicator" />
             </div>
           </div>

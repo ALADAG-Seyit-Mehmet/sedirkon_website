@@ -24,7 +24,7 @@ export function Upholstery() {
   }, []);
 
   return (
-    <section className="w-full py-[15vh] px-md md:px-xl container mx-auto bg-charcoal-950">
+    <section className="w-full py-3xl md:py-section px-md md:px-xl container mx-auto bg-charcoal-950">
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-2xl lg:gap-4xl items-center">
         

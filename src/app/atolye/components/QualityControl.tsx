@@ -4,7 +4,7 @@ import { RevealText } from "@/components/motion/RevealText";
 
 export function QualityControl() {
   return (
-    <section className="w-full py-[20vh] bg-charcoal-900 border-t border-charcoal-800">
+    <section className="w-full py-4xl md:py-section bg-charcoal-900 border-t border-charcoal-800">
       <div className="container mx-auto px-md md:px-xl">
         
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
@@ -22,8 +22,8 @@ export function QualityControl() {
 
           <FadeIn delay={0.6} duration={1.5} className="mb-4xl">
             <p className="text-cream-500/70 font-sans text-xl md:text-2xl font-light leading-relaxed">
-              Atölyeden çıkmadan önce her bir parça, ustabaşı tarafından son kez gözlemlenir. 
-              Dokunulur, hissedilir ve test edilir. Kusursuzluk, Sedirkon'da bir standart değil, bir zorunluluktur.
+              Atölyeden çıkmadan önce her bir parça, ustabaşı tarafından son kez gözlemlenir.
+              Dokunulur, hissedilir ve test edilir. Kusursuzluk, Sedirkon&apos;da bir standart değil, bir zorunluluktur.
             </p>
           </FadeIn>
 
@@ -31,7 +31,7 @@ export function QualityControl() {
 
         {/* Cinematic Wide Image */}
         <FadeIn delay={1.0} duration={2}>
-          <div className="w-full aspect-[21/9] bg-charcoal-950 relative overflow-hidden group">
+          <div className="w-full aspect-21/9 bg-charcoal-950 relative overflow-hidden group">
             <SmartImage 
               src="https://images.unsplash.com/photo-1502672260266-1c1f5166f2dc?auto=format&fit=crop&q=90&w=2000"
               alt="Kalite Kontrol Süreci"

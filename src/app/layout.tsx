@@ -5,7 +5,6 @@ import Loader from "@/components/loading/Loader";
 import Navbar from "@/components/navigation/Navbar";
 import { ScrollIndicator } from "@/components/interactions/ScrollIndicator";
 import { TransitionProvider } from "@/components/motion/TransitionProvider";
-import { TransitionOverlay } from "@/components/motion/TransitionOverlay";
 import { MediaProvider } from "@/components/media/MediaProvider";
 import { CursorProvider } from "@/components/interactions/CursorContext";
 import { Cursor } from "@/components/interactions/Cursor";
@@ -84,10 +83,10 @@ export default function RootLayout({
   return (
     <html
       lang="tr"
-      className={`${manrope.variable} ${playfair.variable} h-full antialiased`}
+      className={`${manrope.variable} ${playfair.variable} antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-charcoal-950">
-        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-[9999] focus:p-4 focus:bg-charcoal-900 focus:text-cream-500">
+      <body className="flex flex-col bg-charcoal-950">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-9999 focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:font-bold">
           Ana içeriğe atla
         </a>
         <SearchProvider>
@@ -99,9 +98,9 @@ export default function RootLayout({
                   <Loader />
                   <ScrollIndicator />
                   <Navbar />
-                  <main id="main-content" className="flex-1 w-full">
+                  <div id="main-content" className="flex-1 w-full overflow-x-hidden">
                     {children}
-                  </main>
+                  </div>
                 </SmoothScroll>
               </TransitionProvider>
             </MediaProvider>

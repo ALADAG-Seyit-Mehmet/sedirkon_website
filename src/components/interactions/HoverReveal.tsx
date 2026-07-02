@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { useCursor } from "./CursorContext";
 
@@ -12,16 +12,15 @@ interface HoverRevealProps {
   offsetY?: number;
 }
 
-export function HoverReveal({ 
-  children, 
-  revealContent, 
+export function HoverReveal({
+  children,
+  revealContent,
   className = "",
   offsetX = 20,
   offsetY = 20
 }: HoverRevealProps) {
   const triggerRef = useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
   const { isTouchDevice } = useCursor();
 
   useEffect(() => {
@@ -42,9 +41,6 @@ export function HoverReveal({
     const trigger = triggerRef.current;
 
     const handleMouseEnter = (e: MouseEvent) => {
-      setIsVisible(true);
-      
-      // Set initial position immediately without animation so it doesn't fly from top left
       gsap.set(tooltip, { x: e.clientX + offsetX, y: e.clientY + offsetY });
       
       gsap.to(tooltip, {
@@ -58,7 +54,6 @@ export function HoverReveal({
     };
 
     const handleMouseLeave = () => {
-      setIsVisible(false);
       gsap.to(tooltip, {
         opacity: 0,
         scale: 0.9,

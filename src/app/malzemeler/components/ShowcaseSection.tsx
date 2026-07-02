@@ -9,7 +9,7 @@ export function ShowcaseSection() {
   const showcaseProducts = MOCK_PRODUCTS.slice(0, 3);
 
   return (
-    <section className="w-full py-[15vh] px-md md:px-xl container mx-auto bg-charcoal-950">
+    <section className="w-full py-3xl md:py-section px-md md:px-xl container mx-auto bg-charcoal-950">
       
       <div className="mb-4xl flex flex-col items-center text-center">
         <FadeIn delay={0.2}>

@@ -1,7 +1,6 @@
 import { Project } from "@/lib/data";
 import { RevealText } from "@/components/motion/RevealText";
 import { FadeIn } from "@/components/motion/FadeIn";
-import { TransitionLink as Link } from "@/components/motion/TransitionLink";
 
 interface ProjectTimelineProps {
   projects: Project[];
@@ -12,9 +11,9 @@ export function ProjectTimeline({ projects }: ProjectTimelineProps) {
   const sortedProjects = [...projects].sort((a, b) => parseInt(b.year) - parseInt(a.year));
 
   return (
-    <section className="w-full py-[15vh] px-md md:px-xl container mx-auto bg-charcoal-950 border-t border-cream-500/10">
+    <section className="w-full py-3xl md:py-section px-md md:px-xl container mx-auto bg-charcoal-950 border-t border-cream-500/10">
       
-      <div className="mb-4xl md:mb-6xl flex justify-between items-end">
+      <div className="mb-4xl md:mb-section flex justify-between items-end">
         <div>
           <FadeIn delay={0.2}>
             <span className="text-bronze-500 font-sans text-xs tracking-[0.3em] uppercase block mb-md">

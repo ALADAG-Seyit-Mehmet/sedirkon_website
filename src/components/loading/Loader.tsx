@@ -10,23 +10,40 @@ export default function Loader() {
   const loadingIndicatorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Disable scroll globally immediately
-    if (typeof window !== "undefined") {
-      document.body.style.overflow = "hidden";
-      if ((window as any).lenis) {
-        (window as any).lenis.stop();
+    if (typeof window === "undefined") return;
+
+    document.body.style.overflow = "hidden";
+
+    const tryStopLenis = () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const w = window as any;
+      if (w.lenis) {
+        w.lenis.stop();
+        return true;
       }
-    }
+      return false;
+    };
+
+    // Lenis may not be initialized yet (child useEffect runs before parent)
+    // Retry until it's available or give up after 500ms
+    let attempts = 0;
+    const maxAttempts = 10;
+    const interval = setInterval(() => {
+      if (tryStopLenis() || attempts >= maxAttempts) {
+        clearInterval(interval);
+      }
+      attempts++;
+    }, 50);
 
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         onComplete: () => {
-          // Re-enable scrolling after loader finishes
-          if (typeof window !== "undefined") {
-            document.body.style.overflow = "";
-            if ((window as any).lenis) {
-              (window as any).lenis.start();
-            }
+          if (typeof window === "undefined") return;
+          document.body.style.overflow = "";
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const w = window as any;
+          if (w.lenis) {
+            w.lenis.start();
           }
         },
       });
@@ -70,6 +87,7 @@ export default function Loader() {
     }, loaderRef);
 
     return () => {
+      clearInterval(interval);
       ctx.revert();
       if (typeof window !== "undefined") {
         document.body.style.overflow = "";

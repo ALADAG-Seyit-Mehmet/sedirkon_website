@@ -14,23 +14,22 @@ export function CommandPalette() {
 
   useEffect(() => {
     if (isOpen) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsMounted(true);
-      document.body.style.overflow = "hidden"; // Focus Trap & Scroll lock
+      document.body.style.overflow = "hidden";
 
-      // Enter Animation
       gsap.to(overlayRef.current, { opacity: 1, duration: 0.4, ease: "power3.out" });
       gsap.fromTo(
-        paletteRef.current, 
-        { opacity: 0, scale: 0.95, y: 10 }, 
+        paletteRef.current,
+        { opacity: 0, scale: 0.95, y: 10 },
         { opacity: 1, scale: 1, y: 0, duration: 0.4, ease: "power3.out", delay: 0.1 }
       );
     } else if (isMounted) {
-      // Exit Animation
       gsap.to(paletteRef.current, { opacity: 0, scale: 0.98, y: -5, duration: 0.3, ease: "power2.in" });
-      gsap.to(overlayRef.current, { 
-        opacity: 0, 
-        duration: 0.3, 
-        ease: "power2.in", 
+      gsap.to(overlayRef.current, {
+        opacity: 0,
+        duration: 0.3,
+        ease: "power2.in",
         onComplete: () => {
           setIsMounted(false);
           document.body.style.overflow = "";
