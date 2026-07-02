@@ -33,7 +33,7 @@ export function QualityControl() {
         <FadeIn delay={1.0} duration={2}>
           <div className="w-full aspect-21/9 bg-charcoal-950 relative overflow-hidden group">
             <SmartImage 
-              src="https://images.unsplash.com/photo-1502672260266-1c1f5166f2dc?auto=format&fit=crop&q=90&w=2000"
+              src="https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?auto=format&fit=crop&q=90&w=2000"
               alt="Kalite Kontrol Süreci"
               fill
               sizes="100vw"

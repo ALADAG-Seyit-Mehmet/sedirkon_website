@@ -12,7 +12,7 @@ export function MetalGlassSection() {
         <div className="bg-charcoal-900 p-xl md:p-4xl flex flex-col justify-between aspect-square relative group overflow-hidden border-r border-b border-cream-500/10">
           <div className="absolute inset-0 z-0">
             <SmartImage 
-              src="https://images.unsplash.com/photo-1533036920150-7117188b4b73?auto=format&fit=crop&q=90&w=1000"
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=90&w=1000"
               alt="Mat Siyah Çelik"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"

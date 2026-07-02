@@ -56,7 +56,7 @@ export const MOCK_PRODUCTS: Product[] = [
     ],
     macroImages: [
       "https://images.unsplash.com/photo-1580584126903-c17d41830450?auto=format&fit=crop&q=90&w=1200",
-      "https://images.unsplash.com/photo-1522757626116-3fa702ea493b?auto=format&fit=crop&q=90&w=1200",
+      "https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?auto=format&fit=crop&q=90&w=1200",
       "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=90&w=1200"
     ],
     specifications: [
@@ -92,8 +92,8 @@ export const MOCK_PRODUCTS: Product[] = [
       "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=90&w=1600"
     ],
     macroImages: [
-      "https://images.unsplash.com/photo-1590158498218-47230491fb8d?auto=format&fit=crop&q=90&w=1200",
-      "https://images.unsplash.com/photo-1590158309503-49d68243a758?auto=format&fit=crop&q=90&w=1200"
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=90&w=1200",
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=90&w=1200"
     ],
     specifications: [
       { label: "İskelet", value: "Elektrostatik Boyalı Bükme Çelik" },
@@ -123,11 +123,11 @@ export const MOCK_PRODUCTS: Product[] = [
       "Nox Yemek Masası, doğanın anarşik güzelliği ile insan yapımı geometrinin mükemmel birleşimini temsil eder. Üst tabladaki doğal damarlar, her masayı dünyada tek ve eşsiz kılar."
     ],
     craftsmanshipImages: [
-      "https://images.unsplash.com/photo-1611078500204-c5aeb1c28c68?auto=format&fit=crop&q=90&w=1600"
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=90&w=1600"
     ],
     macroImages: [
-      "https://images.unsplash.com/photo-1610992383561-1250325fa124?auto=format&fit=crop&q=90&w=1200",
-      "https://images.unsplash.com/photo-1611078726588-348b61e2a048?auto=format&fit=crop&q=90&w=1200"
+      "https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?auto=format&fit=crop&q=90&w=1200",
+      "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=90&w=1200"
     ],
     specifications: [
       { label: "Üst Tabla", value: "40mm Kalınlığında Masif Amerikan Cevizi" },

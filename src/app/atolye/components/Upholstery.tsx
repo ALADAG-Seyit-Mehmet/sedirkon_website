@@ -8,8 +8,8 @@ import { cn } from "@/lib/utils";
 
 const UPHOLSTERY_IMAGES = [
   "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=90&w=1200",
-  "https://images.unsplash.com/photo-1590158498218-47230491fb8d?auto=format&fit=crop&q=90&w=1200",
-  "https://images.unsplash.com/photo-1611078726588-348b61e2a048?auto=format&fit=crop&q=90&w=1200"
+  "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=90&w=1200",
+  "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=90&w=1200"
 ];
 
 export function Upholstery() {

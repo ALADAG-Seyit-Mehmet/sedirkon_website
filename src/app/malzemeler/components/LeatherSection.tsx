@@ -14,7 +14,7 @@ export function LeatherSection() {
             <MaskReveal direction="top-to-bottom" duration={1.5}>
               <div className="w-full aspect-square bg-charcoal-950 relative">
                 <SmartImage 
-                  src="https://images.unsplash.com/photo-1596200155097-d86b72a6b284?auto=format&fit=crop&q=90&w=1200"
+                  src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&q=90&w=1200"
                   alt="Premium Deri"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
