@@ -32,7 +32,7 @@ export function SmartImage({
   return (
     <div 
       className={cn(
-        "relative overflow-hidden w-full",
+        "relative overflow-hidden w-full h-full",
         aspectRatio, // Can be overridden if needed
         containerClassName
       )}
