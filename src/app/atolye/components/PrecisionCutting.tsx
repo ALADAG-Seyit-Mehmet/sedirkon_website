@@ -16,7 +16,7 @@ export function PrecisionCutting() {
             <MaskReveal direction="top-to-bottom" duration={1.5}>
               <div className="w-full h-full bg-charcoal-900 relative">
                 <SmartImage 
-                  src="https://images.unsplash.com/photo-1505353597816-43f214db254c?auto=format&fit=crop&q=90&w=1200"
+                  src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=90&w=1200"
                   alt="Ahşap kesim makinesi"
                   fill
                   sizes="(max-width: 768px) 80vw, 50vw"

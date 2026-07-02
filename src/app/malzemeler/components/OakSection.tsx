@@ -14,7 +14,7 @@ export function OakSection() {
           <MaskReveal direction="left-to-right" duration={1.8}>
             <div className="w-full aspect-[4/5] md:aspect-square bg-charcoal-900 relative">
               <SmartImage 
-                src="https://images.unsplash.com/photo-1543888362-f70355f37508?auto=format&fit=crop&q=90&w=1200"
+                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=90&w=1200"
                 alt="Meşe Ağacı Dokusu"
                 fill
                 sizes="(max-width: 768px) 100vw, 60vw"

@@ -57,7 +57,7 @@ export const MOCK_PRODUCTS: Product[] = [
     macroImages: [
       "https://images.unsplash.com/photo-1580584126903-c17d41830450?auto=format&fit=crop&q=90&w=1200",
       "https://images.unsplash.com/photo-1522757626116-3fa702ea493b?auto=format&fit=crop&q=90&w=1200",
-      "https://images.unsplash.com/photo-1584346067715-68b3fbd235eb?auto=format&fit=crop&q=90&w=1200"
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=90&w=1200"
     ],
     specifications: [
       { label: "İskelet", value: "Fırınlanmış Gürgen ve Huş Kontrplak" },

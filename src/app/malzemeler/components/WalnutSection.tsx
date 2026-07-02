@@ -49,7 +49,7 @@ export function WalnutSection() {
           <MaskReveal direction="right-to-left" duration={1.8}>
             <div className="w-full aspect-[4/5] md:aspect-square bg-charcoal-900 relative">
               <SmartImage 
-                src="https://images.unsplash.com/photo-1628186259048-0c6a51cc20a1?auto=format&fit=crop&q=90&w=1200"
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=90&w=1200"
                 alt="Amerikan Cevizi Dokusu"
                 fill
                 sizes="(max-width: 768px) 100vw, 60vw"

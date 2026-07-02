@@ -7,8 +7,8 @@ import { RevealText } from "@/components/motion/RevealText";
 import { cn } from "@/lib/utils";
 
 const LINEN_IMAGES = [
-  "https://images.unsplash.com/photo-1616584065609-b6951b1451f0?auto=format&fit=crop&q=90&w=1200",
-  "https://images.unsplash.com/photo-1584346067715-68b3fbd235eb?auto=format&fit=crop&q=90&w=1200"
+  "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=90&w=1200",
+  "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=90&w=1200"
 ];
 
 export function LinenSection() {
