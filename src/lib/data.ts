@@ -109,7 +109,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Geniş aile yemekleri ve özel davetler için tasarlandı. Nox, tek parça ceviz tablası ve monoblok metal ayaklarıyla endüstriyel lüksü yeniden yorumluyor.",
     category: "yemek-odalari",
     images: [
-      "https://images.unsplash.com/photo-1617806118233-18e1c094f01e?auto=format&fit=crop&q=90&w=2000",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=90&w=2000",
       "https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&q=90&w=2000",
     ],
     dimensions: "G: 220cm x D: 100cm x Y: 76cm",
