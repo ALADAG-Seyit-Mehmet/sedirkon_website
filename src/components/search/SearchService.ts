@@ -43,7 +43,7 @@ export class SearchService {
     const results = this.fuse.search(query);
     
     // Extract and map score
-    return results.map(result => ({
+    return results.map((result: any) => ({
       ...result.item,
       score: result.score
     }));

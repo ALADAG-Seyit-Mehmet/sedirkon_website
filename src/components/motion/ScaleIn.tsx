@@ -1,10 +1,12 @@
+"use client";
+
 import React from "react";
 import { useReveal } from "@/hooks/useReveal";
 import { MotionProps } from "@/types/motion";
 import { cn } from "@/lib/utils";
 
-interface ScaleInProps extends MotionProps {
-  as?: keyof JSX.IntrinsicElements;
+interface ScaleInProps extends React.HTMLAttributes<HTMLElement>, MotionProps {
+  as?: React.ElementType;
 }
 
 export function ScaleIn({
@@ -15,12 +17,17 @@ export function ScaleIn({
   delay,
   ease,
   scrollTrigger = true,
+  ...rest
 }: ScaleInProps) {
   const ref = useReveal({ type: "scale", duration, delay, ease, scrollTrigger }) as React.RefObject<any>;
 
-  return (
-    <Component ref={ref} className={cn("will-change-transform opacity-0", className)}>
-      {children}
-    </Component>
+  return React.createElement(
+    Component,
+    {
+      ref,
+      className: cn("will-change-transform opacity-0", className),
+      ...rest
+    },
+    children
   );
 }

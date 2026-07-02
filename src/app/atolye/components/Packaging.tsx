@@ -11,7 +11,7 @@ export function Packaging() {
         
         {/* Left: Image */}
         <div className="w-full relative">
-          <MaskReveal direction="top-to-bottom" duration={1.5}>
+          <MaskReveal duration={1.5}>
             <div className="w-full aspect-square bg-charcoal-900 relative">
               <SmartImage 
                 src="https://images.unsplash.com/photo-1607344645866-009c320c5ab2?auto=format&fit=crop&q=90&w=1200"

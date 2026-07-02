@@ -1,13 +1,15 @@
+"use client";
+
 import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { cn } from "@/lib/utils";
 
-interface SectionTransitionProps {
+interface SectionTransitionProps extends React.HTMLAttributes<HTMLElement> {
   children: React.ReactNode;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: React.ElementType;
   pin?: boolean;
 }
 
@@ -16,6 +18,7 @@ export function SectionTransition({
   className,
   as: Component = "section",
   pin = false,
+  ...rest
 }: SectionTransitionProps) {
   const containerRef = useRef<any>(null);
 
@@ -32,9 +35,13 @@ export function SectionTransition({
     }
   }, { scope: containerRef });
 
-  return (
-    <Component ref={containerRef} className={cn("relative w-full", className)}>
-      {children}
-    </Component>
+  return React.createElement(
+    Component,
+    {
+      ref: containerRef,
+      className: cn("relative w-full", className),
+      ...rest
+    },
+    children
   );
 }
