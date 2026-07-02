@@ -3,7 +3,9 @@
 import { RevealText } from "@/components/motion/RevealText";
 import { RevealImage } from "@/components/motion/RevealImage";
 import { FadeIn } from "@/components/motion/FadeIn";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { TransitionLink } from "@/components/motion/TransitionLink";
+import { cn } from "@/lib/utils";
 
 export default function Hero() {
   return (
@@ -61,21 +63,27 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-md mt-2xl">
           <FadeIn delay={2.2} duration={1.2} scrollTrigger={false}>
-            <Button
-              variant="outline"
-              className="border-cream-500/30 text-cream-500 hover:bg-cream-500 hover:text-charcoal-950 font-sans tracking-widest text-xs uppercase px-10 py-6 transition-all duration-500"
+            <TransitionLink
+              href="/koleksiyon"
+              className={cn(
+                buttonVariants({ variant: "outline" }),
+                "border-cream-500/30 text-cream-500 hover:bg-cream-500 hover:text-charcoal-950 font-sans tracking-widest text-xs uppercase px-10 py-6 transition-all duration-500"
+              )}
             >
               Koleksiyonu Keşfet
-            </Button>
+            </TransitionLink>
           </FadeIn>
 
           <FadeIn delay={2.4} duration={1.2} scrollTrigger={false}>
-            <Button
-              variant="outline"
-              className="border-transparent text-cream-500 hover:text-white hover:bg-white/5 font-sans tracking-widest text-xs uppercase px-10 py-6 transition-all duration-500"
+            <TransitionLink
+              href="/atolye"
+              className={cn(
+                buttonVariants({ variant: "outline" }),
+                "border-transparent text-cream-500 hover:text-white hover:bg-white/5 font-sans tracking-widest text-xs uppercase px-10 py-6 transition-all duration-500"
+              )}
             >
               Atölyemizi İncele
-            </Button>
+            </TransitionLink>
           </FadeIn>
         </div>
 
