@@ -135,8 +135,8 @@ export const MOCK_PRODUCTS: Product[] = [
       { label: "Ayak", value: "Lazer Kesim Monoblok Çelik" },
       { label: "Kapasite", value: "8 - 10 Kişilik Oturum Alanı" }
     ]
-// ... existing content ...
-}
+  }
+];
 
 export type Project = {
   id: string;
@@ -210,7 +210,7 @@ export const MOCK_PROJECTS: Project[] = [
     testimonial: "Mimari ile iç mekanın kusursuz bütünleşmesi.",
     usedProducts: ["monolith-masa"]
   }
-];;
+];
 
 export const CATEGORIES = [
   { id: "all", label: "Tüm Koleksiyon" },
