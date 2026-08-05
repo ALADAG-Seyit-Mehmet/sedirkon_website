@@ -12,10 +12,10 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
   if (!project) return null;
 
   return (
-    <section className="w-full py-3xl md:py-section bg-charcoal-950">
+    <section className="w-full py-16 md:py-24 lg:py-section bg-charcoal-950">
       
       {/* Featured Banner */}
-      <div className="container mx-auto px-md md:px-xl mb-xl">
+      <div className="container mx-auto px-4 md:px-8 lg:px-xl mb-xl">
         <FadeIn delay={0.2}>
           <span className="text-bronze-500 font-sans text-xs tracking-[0.3em] uppercase block mb-md">
             Öne Çıkan Proje
@@ -41,7 +41,7 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
         
         {/* Project Meta overlay */}
         <div className="absolute bottom-0 left-0 w-full p-md md:p-xl flex flex-col md:flex-row justify-between items-end pb-xl md:pb-2xl">
-          <div className="container mx-auto">
+          <div className="container mx-auto px-4 lg:px-0">
             <RevealText 
               text={project.title} 
               as="h2" 

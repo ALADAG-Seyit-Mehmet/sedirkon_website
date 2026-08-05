@@ -5,7 +5,7 @@ import { SmartImage } from "@/components/ui/SmartImage";
 
 export function Packaging() {
   return (
-    <section className="w-full py-3xl md:py-section px-md md:px-xl container mx-auto bg-charcoal-950">
+    <section className="w-full py-16 md:py-24 lg:py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950">
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-xl md:gap-4xl items-center">
         
@@ -34,7 +34,7 @@ export function Packaging() {
           <RevealText 
             text="Paketleme Ritüeli" 
             as="h2" 
-            className="text-4xl md:text-5xl font-serif text-cream-500 tracking-tight leading-tight mb-6 md:mb-8"
+            className="text-3xl md:text-4xl lg:text-5xl font-serif text-cream-500 tracking-tight leading-tight mb-6 md:mb-8"
           />
           <FadeIn delay={0.6} duration={1.5}>
             <p className="text-cream-500/70 font-sans text-lg md:text-xl font-light leading-relaxed">

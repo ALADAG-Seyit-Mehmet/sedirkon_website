@@ -22,17 +22,17 @@ export function HeroSection() {
       </div>
 
       {/* Cinematic Text Overlay */}
-      <div className="relative z-20 container mx-auto px-md md:px-xl">
+      <div className="relative z-20 container mx-auto px-4 md:px-8 lg:px-xl">
         <RevealText 
           text="Malzeme," 
           as="h1" 
-          className="text-5xl md:text-8xl lg:text-9xl font-serif text-cream-500 tracking-tighter leading-none"
+          className="text-4xl md:text-6xl lg:text-9xl font-serif text-cream-500 tracking-tighter leading-none"
         />
         <RevealText 
           text="Kalitenin İlk Adımıdır" 
           as="h1" 
           delay={0.2}
-          className="text-5xl md:text-8xl lg:text-9xl font-serif text-cream-500 tracking-tighter leading-none"
+          className="text-4xl md:text-6xl lg:text-9xl font-serif text-cream-500 tracking-tighter leading-none"
         />
         
         <FadeIn delay={1.2} duration={2}>

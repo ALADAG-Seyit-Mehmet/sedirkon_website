@@ -9,7 +9,7 @@ export function DesignerQuote({ product }: DesignerQuoteProps) {
   if (!product.designerQuote) return null;
 
   return (
-    <section className="w-full py-4xl md:py-section px-md md:px-xl container mx-auto bg-charcoal-950 flex justify-center text-center">
+    <section className="w-full py-16 md:py-32 lg:py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950 flex justify-center text-center">
       
       <FadeIn delay={0.2} duration={2} className="max-w-4xl relative">
         {/* Oversized decorative quote mark */}
@@ -17,7 +17,7 @@ export function DesignerQuote({ product }: DesignerQuoteProps) {
           &ldquo;
         </span>
         
-        <p className="relative z-10 text-3xl md:text-5xl lg:text-6xl font-serif text-cream-500 leading-tight italic">
+        <p className="relative z-10 text-2xl md:text-4xl lg:text-6xl font-serif text-cream-500 leading-tight italic">
           {product.designerQuote}
         </p>
         

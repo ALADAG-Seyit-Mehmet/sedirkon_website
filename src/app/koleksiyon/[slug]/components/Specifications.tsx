@@ -10,7 +10,7 @@ export function Specifications({ product }: SpecificationsProps) {
   if (!product.specifications || product.specifications.length === 0) return null;
 
   return (
-    <section className="w-full py-section px-md md:px-xl container mx-auto bg-charcoal-950">
+    <section className="w-full py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950">
       
       <div className="mb-2xl md:mb-4xl text-center md:text-left">
         <RevealText 

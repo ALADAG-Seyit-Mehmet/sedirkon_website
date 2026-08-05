@@ -4,8 +4,8 @@ import { RevealText } from "@/components/motion/RevealText";
 
 export function HandCraftsmanship() {
   return (
-    <section className="w-full py-4xl md:py-section px-md md:px-xl bg-charcoal-900">
-      <div className="container mx-auto">
+    <section className="w-full py-16 md:py-32 lg:py-section px-4 md:px-8 lg:px-xl bg-charcoal-900">
+      <div className="container mx-auto px-4 lg:px-0">
         
         {/* Title Centered */}
         <div className="text-center mb-12 md:mb-16">
@@ -17,13 +17,13 @@ export function HandCraftsmanship() {
           <RevealText 
             text="İnsan Eli," 
             as="h2" 
-            className="text-5xl md:text-7xl font-serif text-cream-500 tracking-tight leading-none"
+            className="text-4xl md:text-6xl lg:text-7xl font-serif text-cream-500 tracking-tight leading-none"
           />
           <RevealText 
             text="Mükemmelliğin İmzası" 
             as="h2" 
             delay={0.2}
-            className="text-5xl md:text-7xl font-serif text-cream-500 tracking-tight leading-none"
+            className="text-4xl md:text-6xl lg:text-7xl font-serif text-cream-500 tracking-tight leading-none"
           />
         </div>
 

@@ -16,13 +16,13 @@ export function ProductsUsed({ productSlugs }: ProductsUsedProps) {
     .filter(Boolean) as typeof MOCK_PRODUCTS;
 
   return (
-    <section className="w-full py-3xl md:py-section px-md md:px-xl container mx-auto bg-charcoal-950 border-t border-cream-500/10 mt-xl">
+    <section className="w-full py-16 md:py-24 lg:py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950 border-t border-cream-500/10 mt-xl">
       
       <div className="mb-4xl text-center">
         <RevealText 
           text="Mekanı Tamamlayan Parçalar" 
           as="h2" 
-          className="text-3xl md:text-5xl font-serif text-cream-500 tracking-tight"
+          className="text-2xl md:text-4xl lg:text-5xl font-serif text-cream-500 tracking-tight"
         />
       </div>
 
@@ -49,7 +49,7 @@ export function ProductsUsed({ productSlugs }: ProductsUsedProps) {
                 <span className="text-bronze-500 font-sans text-xs tracking-[0.3em] uppercase mb-sm transition-transform duration-500 group-hover:translate-x-2">
                   İncele
                 </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-cream-500 transition-transform duration-500 delay-75 group-hover:translate-x-2">
+                <h3 className="font-serif text-2xl md:text-4xl lg:text-5xl text-cream-500 transition-transform duration-500 delay-75 group-hover:translate-x-2">
                   {product.title}
                 </h3>
               </div>

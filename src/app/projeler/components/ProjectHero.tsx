@@ -22,7 +22,7 @@ export function ProjectHero() {
       </div>
 
       {/* Cinematic Text Overlay */}
-      <div className="relative z-20 container mx-auto px-md md:px-xl">
+      <div className="relative z-20 container mx-auto px-4 md:px-8 lg:px-xl">
         <div className="max-w-5xl">
           <FadeIn delay={0.2}>
             <span className="text-bronze-500 font-sans text-xs tracking-[0.4em] uppercase block mb-md">

@@ -47,12 +47,12 @@ export default async function CollectionPage(props: { searchParams?: Promise<{ k
         }}
       />
       {/* Header */}
-      <section className="container mx-auto px-md md:px-xl mb-4xl">
+      <section className="container mx-auto px-4 md:px-8 lg:px-xl mb-4xl">
         <div className="max-w-4xl">
           <RevealText 
             text="Koleksiyon" 
             as="h1" 
-            className="text-5xl md:text-7xl font-serif text-cream-500 tracking-tight" 
+            className="text-4xl md:text-6xl lg:text-7xl font-serif text-cream-500 tracking-tight" 
           />
           <FadeIn delay={0.8} duration={1.2}>
             <p className="mt-md text-cream-500/70 font-sans text-lg md:text-xl max-w-2xl font-light leading-relaxed">
@@ -83,7 +83,7 @@ export default async function CollectionPage(props: { searchParams?: Promise<{ k
       </section>
 
       {/* Grid (Editorial layout, asymmetrical masonry) */}
-      <section className="container mx-auto px-md md:px-xl">
+      <section className="container mx-auto px-4 md:px-8 lg:px-xl">
         <div className="columns-1 md:columns-2 gap-x-xl md:gap-x-24">
           {filteredProducts.map((product, index) => {
             const aspectClass = "aspect-[4/3]";

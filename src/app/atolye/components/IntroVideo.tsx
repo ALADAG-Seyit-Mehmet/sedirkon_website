@@ -19,18 +19,18 @@ export function IntroVideo() {
       </div>
 
       {/* Cinematic Text Overlay */}
-      <div className="relative z-20 container mx-auto px-md md:px-xl pb-24 md:pb-32">
+      <div className="relative z-20 container mx-auto px-4 md:px-8 lg:px-xl pb-24 md:pb-32">
         <div className="max-w-4xl">
           <RevealText 
             text="Her Parça" 
             as="h1" 
-            className="text-5xl md:text-8xl lg:text-9xl font-serif text-cream-500 tracking-tighter"
+            className="text-4xl md:text-6xl lg:text-9xl font-serif text-cream-500 tracking-tighter"
           />
           <RevealText 
             text="Bir Hikâye Taşır" 
             as="h1" 
             delay={0.2}
-            className="text-5xl md:text-8xl lg:text-9xl font-serif text-cream-500 tracking-tighter"
+            className="text-4xl md:text-6xl lg:text-9xl font-serif text-cream-500 tracking-tighter"
           />
           <FadeIn delay={1.2} duration={2}>
             <p className="mt-xl text-cream-500/70 font-sans text-xl md:text-2xl font-light tracking-wide max-w-2xl leading-relaxed">

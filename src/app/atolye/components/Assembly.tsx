@@ -4,7 +4,7 @@ import { SmartImage } from "@/components/ui/SmartImage";
 
 export function Assembly() {
   return (
-    <section className="w-full py-3xl md:py-section px-md md:px-xl container mx-auto bg-charcoal-950 flex flex-col items-center">
+    <section className="w-full py-16 md:py-24 lg:py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950 flex flex-col items-center">
       
       <div className="text-center">
         <FadeIn delay={0.2}>
@@ -16,7 +16,7 @@ export function Assembly() {
         <RevealText 
           text="Kusursuz Bütünlük" 
           as="h2" 
-          className="text-3xl md:text-5xl font-serif text-cream-100 font-light mb-6"
+          className="text-2xl md:text-4xl lg:text-5xl font-serif text-cream-100 font-light mb-6"
         />
       </div>
 

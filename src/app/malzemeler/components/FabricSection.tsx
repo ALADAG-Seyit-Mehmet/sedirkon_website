@@ -35,7 +35,7 @@ export function FabricSection() {
   }, []);
 
   return (
-    <section className="w-full py-3xl md:py-section px-md md:px-xl container mx-auto bg-charcoal-950 border-t border-cream-500/10">
+    <section className="w-full py-16 md:py-24 lg:py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950 border-t border-cream-500/10">
       
       <div className="text-center mb-4xl">
         <FadeIn delay={0.2}>

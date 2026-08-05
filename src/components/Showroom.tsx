@@ -28,19 +28,19 @@ export default function Showroom() {
       </div>
 
       {/* Typography Overlay / Text Section */}
-      <div className="w-full md:w-1/3 py-xl md:py-0 md:h-screen flex flex-col justify-center px-md md:px-xl z-10 order-1 md:order-2 bg-charcoal-900/50 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none">
+      <div className="w-full md:w-1/3 py-xl md:py-0 md:h-screen flex flex-col justify-center px-4 md:px-8 lg:px-xl z-10 order-1 md:order-2 bg-charcoal-900/50 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none">
         <RevealText 
           text="Minimalist Çizgi," 
           as="h2" 
           duration={1.2} 
-          className="text-3xl md:text-5xl font-serif text-cream-500 tracking-tight"
+          className="text-2xl md:text-4xl lg:text-5xl font-serif text-cream-500 tracking-tight"
         />
         <RevealText 
           text="Maksimalist Dokunuş" 
           as="h2" 
           duration={1.2} 
           delay={0.4} 
-          className="text-3xl md:text-5xl font-serif text-cream-500 tracking-tight mt-xs"
+          className="text-2xl md:text-4xl lg:text-5xl font-serif text-cream-500 tracking-tight mt-xs"
         />
         
         <FadeIn delay={0.8} duration={1.5} className="mt-lg">

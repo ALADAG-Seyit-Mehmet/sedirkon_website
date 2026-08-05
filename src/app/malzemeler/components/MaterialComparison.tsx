@@ -10,14 +10,14 @@ const MATERIALS = [
 
 export function MaterialComparison() {
   return (
-    <section className="w-full py-3xl md:py-section px-md md:px-xl bg-charcoal-950">
-      <div className="container mx-auto max-w-5xl">
+    <section className="w-full py-16 md:py-24 lg:py-section px-4 md:px-8 lg:px-xl bg-charcoal-950">
+      <div className="container mx-auto px-4 lg:px-0 max-w-5xl">
         
         <div className="text-center mb-4xl">
           <RevealText 
             text="Karakter Analizi" 
             as="h2" 
-            className="text-3xl md:text-5xl font-serif text-cream-500 tracking-widest uppercase"
+            className="text-2xl md:text-4xl lg:text-5xl font-serif text-cream-500 tracking-widest uppercase"
           />
         </div>
 

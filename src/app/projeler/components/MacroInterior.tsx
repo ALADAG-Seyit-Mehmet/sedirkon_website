@@ -50,8 +50,8 @@ export function MacroInterior({ project }: MacroInteriorProps) {
   }));
 
   return (
-    <section ref={containerRef} className="py-3xl md:py-4xl border-t border-cream-500/10">
-      <div className="container mx-auto px-md md:px-xl">
+    <section ref={containerRef} className="py-16 md:py-24 lg:py-4xl border-t border-cream-500/10">
+      <div className="container mx-auto px-4 md:px-8 lg:px-xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-xl md:gap-4xl">
           {project.macroImages.map((img, idx) => (
             <FadeIn key={idx} delay={0.2 * idx} className={idx === 1 ? "md:mt-4xl" : ""}>

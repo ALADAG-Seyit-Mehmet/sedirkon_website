@@ -7,7 +7,7 @@ const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponen
 
 export function ContactInfo() {
   return (
-    <section className="w-full px-md md:px-xl container mx-auto mt-lg md:mt-2xl max-w-6xl">
+    <section className="w-full px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 mt-lg md:mt-2xl max-w-6xl">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-md lg:gap-lg">
         
         {/* Left Side: WhatsApp Primary CTA */}

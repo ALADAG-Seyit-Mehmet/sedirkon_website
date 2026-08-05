@@ -145,7 +145,7 @@ export default function Navbar() {
         className="fixed top-0 left-0 w-full z-100 transition-colors py-lg border-b border-transparent"
         style={{ backgroundColor: tokens.colors.charcoal[950] + "00" }}
       >
-        <div className="container mx-auto px-md md:px-xl flex items-center justify-between relative">
+        <div className="container mx-auto px-4 md:px-8 lg:px-xl flex items-center justify-between relative">
           {/* 1. Sol: Logo */}
           <div className="flex-1 flex justify-start">
             <TransitionLink href="/" className="relative z-110 flex items-center gap-2 group">

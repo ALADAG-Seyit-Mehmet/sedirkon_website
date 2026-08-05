@@ -34,14 +34,14 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 container mx-auto px-md md:px-xl flex flex-col items-center text-center">
+      <div className="relative z-20 container mx-auto px-4 md:px-8 lg:px-xl flex flex-col items-center text-center">
         <RevealText 
           text="Ahşabın Ruhu," 
           as="h1" 
           duration={1.5} 
           delay={0.8} 
           scrollTrigger={false}
-          className="text-5xl md:text-7xl lg:text-8xl font-serif text-cream-500 tracking-tight justify-center"
+          className="text-4xl md:text-6xl lg:text-8xl font-serif text-cream-500 tracking-tight justify-center"
         />
         
         <RevealText 
@@ -50,7 +50,7 @@ export default function Hero() {
           duration={1.5} 
           delay={1.2} 
           scrollTrigger={false}
-          className="text-5xl md:text-7xl lg:text-8xl font-serif text-cream-500 tracking-tight justify-center mt-xs md:mt-sm"
+          className="text-4xl md:text-6xl lg:text-8xl font-serif text-cream-500 tracking-tight justify-center mt-xs md:mt-sm"
         />
 
         <FadeIn delay={1.8} duration={1.5} scrollTrigger={false}>

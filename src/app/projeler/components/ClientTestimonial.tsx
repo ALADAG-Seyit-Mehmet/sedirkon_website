@@ -8,8 +8,8 @@ export function ClientTestimonial({ testimonial }: ClientTestimonialProps) {
   if (!testimonial) return null;
 
   return (
-    <section className="w-full py-4xl md:py-section px-md md:px-xl bg-charcoal-900 flex items-center justify-center">
-      <div className="container mx-auto max-w-4xl text-center relative">
+    <section className="w-full py-16 md:py-32 lg:py-section px-4 md:px-8 lg:px-xl bg-charcoal-900 flex items-center justify-center">
+      <div className="container mx-auto px-4 lg:px-0 max-w-4xl text-center relative">
         
         {/* Large Decorative Quotes */}
         <span className="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 text-9xl font-serif text-cream-500/5 select-none leading-none">

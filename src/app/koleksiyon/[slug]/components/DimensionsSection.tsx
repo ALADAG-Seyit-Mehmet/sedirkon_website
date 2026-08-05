@@ -54,7 +54,7 @@ export function DimensionsSection({ product }: DimensionsSectionProps) {
   if (itemsToRender.length === 0 || !itemsToRender[0].val) return null;
 
   return (
-    <section className="w-full py-2xl px-md md:px-xl container mx-auto bg-charcoal-950 flex flex-col items-center border-t border-cream-500/10">
+    <section className="w-full py-2xl px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950 flex flex-col items-center border-t border-cream-500/10">
       
       <div className="text-center mb-xl md:mb-2xl">
         <RevealText 

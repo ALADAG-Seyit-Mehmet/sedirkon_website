@@ -17,12 +17,12 @@ export function ResidentialCommercial({ projects }: ResidentialCommercialProps) 
       
       {/* Residential - Edge to Edge */}
       {residential && (
-        <div className="w-full relative py-3xl md:py-section">
-          <div className="container mx-auto px-md md:px-xl mb-2xl">
+        <div className="w-full relative py-16 md:py-24 lg:py-section">
+          <div className="container mx-auto px-4 md:px-8 lg:px-xl mb-2xl">
             <RevealText 
               text="Bireysel Yaşam Alanları" 
               as="h2" 
-              className="text-3xl md:text-5xl font-serif text-cream-500 tracking-tight"
+              className="text-2xl md:text-4xl lg:text-5xl font-serif text-cream-500 tracking-tight"
             />
             <FadeIn delay={0.4}>
               <p className="mt-md text-cream-500/50 font-sans font-light text-lg max-w-xl">
@@ -42,7 +42,7 @@ export function ResidentialCommercial({ projects }: ResidentialCommercialProps) 
               />
               <div className="absolute inset-0 bg-charcoal-950/20 group-hover:bg-charcoal-950/0 transition-colors duration-1000" />
               <div className="absolute bottom-12 left-12 md:bottom-24 md:left-24">
-                <h3 className="font-serif text-3xl md:text-5xl text-cream-500 drop-shadow-lg">
+                <h3 className="font-serif text-2xl md:text-4xl lg:text-5xl text-cream-500 drop-shadow-lg">
                   {residential.title}
                 </h3>
                 <span className="font-sans text-sm tracking-widest text-cream-500/80 uppercase mt-2 block drop-shadow-md">
@@ -56,14 +56,14 @@ export function ResidentialCommercial({ projects }: ResidentialCommercialProps) 
 
       {/* Commercial - Asymmetric Editorial Layout */}
       {commercial && (
-        <div className="w-full py-3xl md:py-4xl container mx-auto px-md md:px-xl">
+        <div className="w-full py-16 md:py-24 lg:py-4xl container mx-auto px-4 md:px-8 lg:px-xl">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-xl md:gap-4xl items-center">
             
             <div className="md:col-span-5 order-2 md:order-1 flex flex-col justify-center">
               <RevealText 
                 text="Ticari Mekânlar" 
                 as="h2" 
-                className="text-3xl md:text-5xl font-serif text-cream-500 tracking-tight mb-md"
+                className="text-2xl md:text-4xl lg:text-5xl font-serif text-cream-500 tracking-tight mb-md"
               />
               <FadeIn delay={0.4} duration={1.5}>
                 <p className="text-cream-500/70 font-sans font-light text-lg leading-relaxed mb-xl">

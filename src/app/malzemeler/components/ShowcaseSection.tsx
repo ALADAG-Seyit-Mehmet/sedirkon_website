@@ -9,7 +9,7 @@ export function ShowcaseSection() {
   const showcaseProducts = MOCK_PRODUCTS.slice(0, 3);
 
   return (
-    <section className="w-full py-3xl md:py-section px-md md:px-xl container mx-auto bg-charcoal-950">
+    <section className="w-full py-16 md:py-24 lg:py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950">
       
       <div className="mb-4xl flex flex-col items-center text-center">
         <FadeIn delay={0.2}>
@@ -20,7 +20,7 @@ export function ShowcaseSection() {
         <RevealText 
           text="Materyallerin Uyumu" 
           as="h2" 
-          className="text-3xl md:text-5xl font-serif text-cream-500 tracking-widest uppercase"
+          className="text-2xl md:text-4xl lg:text-5xl font-serif text-cream-500 tracking-widest uppercase"
         />
         <FadeIn delay={0.6} duration={1.5}>
           <p className="text-cream-500/50 font-sans text-lg font-light max-w-xl mx-auto mt-lg">

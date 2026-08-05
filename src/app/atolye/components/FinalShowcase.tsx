@@ -16,11 +16,11 @@ export function FinalShowcase() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 container mx-auto px-md md:px-xl">
+      <div className="relative z-20 container mx-auto px-4 md:px-8 lg:px-xl">
         <RevealText 
           text="Bir Hikâye Satın Alın" 
           as="h2" 
-          className="text-5xl md:text-8xl font-serif text-cream-500 tracking-tighter leading-none mb-6 md:mb-8"
+          className="text-4xl md:text-6xl lg:text-8xl font-serif text-cream-500 tracking-tighter leading-none mb-6 md:mb-8"
         />
         
         <FadeIn delay={0.6} duration={2}>

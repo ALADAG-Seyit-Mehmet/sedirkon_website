@@ -4,8 +4,8 @@ import { RevealText } from "@/components/motion/RevealText";
 
 export function QualityControl() {
   return (
-    <section className="w-full py-4xl md:py-section bg-charcoal-900 border-t border-charcoal-800">
-      <div className="container mx-auto px-md md:px-xl">
+    <section className="w-full py-16 md:py-32 lg:py-section bg-charcoal-900 border-t border-charcoal-800">
+      <div className="container mx-auto px-4 md:px-8 lg:px-xl">
         
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           <FadeIn delay={0.2}>

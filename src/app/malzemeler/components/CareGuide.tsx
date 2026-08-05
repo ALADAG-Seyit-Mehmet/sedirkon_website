@@ -3,8 +3,8 @@ import { FadeIn } from "@/components/motion/FadeIn";
 
 export function CareGuide() {
   return (
-    <section className="w-full py-4xl md:py-section px-md md:px-xl bg-charcoal-900 border-t border-charcoal-800">
-      <div className="container mx-auto max-w-6xl">
+    <section className="w-full py-16 md:py-32 lg:py-section px-4 md:px-8 lg:px-xl bg-charcoal-900 border-t border-charcoal-800">
+      <div className="container mx-auto px-4 lg:px-0 max-w-6xl">
         
         <div className="mb-4xl md:mb-section">
           <RevealText 

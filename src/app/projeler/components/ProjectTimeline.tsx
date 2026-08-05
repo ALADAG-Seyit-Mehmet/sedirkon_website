@@ -11,7 +11,7 @@ export function ProjectTimeline({ projects }: ProjectTimelineProps) {
   const sortedProjects = [...projects].sort((a, b) => parseInt(b.year) - parseInt(a.year));
 
   return (
-    <section className="w-full py-3xl md:py-section px-md md:px-xl container mx-auto bg-charcoal-950 border-t border-cream-500/10">
+    <section className="w-full py-16 md:py-24 lg:py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950 border-t border-cream-500/10">
       
       <div className="mb-4xl md:mb-section flex justify-between items-end">
         <div>
@@ -23,7 +23,7 @@ export function ProjectTimeline({ projects }: ProjectTimelineProps) {
           <RevealText 
             text="Tamamlanan Projeler" 
             as="h2" 
-            className="text-4xl md:text-5xl font-serif text-cream-500 tracking-tight leading-none"
+            className="text-3xl md:text-4xl lg:text-5xl font-serif text-cream-500 tracking-tight leading-none"
           />
         </div>
       </div>
