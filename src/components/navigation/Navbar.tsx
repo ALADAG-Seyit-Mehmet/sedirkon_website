@@ -142,13 +142,13 @@ export default function Navbar() {
     <>
       <nav
         ref={navRef}
-        className="fixed top-0 left-0 w-full z-100 transition-colors py-lg border-b border-transparent"
+        className="fixed top-0 left-0 w-full z-50 transition-colors py-lg border-b border-transparent"
         style={{ backgroundColor: tokens.colors.charcoal[950] + "00" }}
       >
         <div className="container mx-auto px-4 md:px-8 lg:px-xl flex items-center justify-between relative">
           {/* 1. Sol: Logo */}
           <div className="flex-1 flex justify-start">
-            <TransitionLink href="/" className="relative z-110 flex items-center gap-2 group">
+            <TransitionLink href="/" className="relative z-50 flex items-center gap-2 group">
               <span className="font-serif text-2xl tracking-[0.15em] text-cream-500 uppercase">
                 Sedirkon
               </span>
@@ -191,7 +191,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Toggle & Search */}
-          <div className="lg:hidden flex items-center gap-2 z-[120] relative">
+          <div className="lg:hidden flex items-center gap-2 z-50 relative">
             <button 
               onClick={openSearch}
               className="text-cream-500 p-2"

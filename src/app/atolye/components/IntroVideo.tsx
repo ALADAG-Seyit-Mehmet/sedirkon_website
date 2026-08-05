@@ -3,7 +3,7 @@ import { FadeIn } from "@/components/motion/FadeIn";
 
 export function IntroVideo() {
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-charcoal-950 flex flex-col justify-end">
+    <section className="relative w-full h-[100dvh] overflow-hidden bg-charcoal-950 flex flex-col justify-end">
       
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full z-0">

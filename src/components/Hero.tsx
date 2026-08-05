@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-charcoal-950">
+    <section className="relative h-[100dvh] w-full flex flex-col justify-center items-center overflow-hidden bg-charcoal-950">
       
       {/* Background Video Setup */}
       <div className="absolute inset-0 z-0">
@@ -26,7 +26,7 @@ export default function Hero() {
             priority
             quality={100}
             sizes="100vw"
-            className="object-cover w-full h-full will-change-transform"
+            className="object-cover object-[25%_center] md:object-center w-full h-full will-change-transform"
           />
         </RevealImage>
         {/* Dark cinematic overlay */}
