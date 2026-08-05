@@ -209,42 +209,43 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Full Screen Menu */}
-        <div
-          ref={mobileMenuRef}
-          className="lg:hidden fixed inset-0 bg-charcoal-950 flex flex-col justify-center items-center"
-          style={{ 
-            zIndex: -1, // Places it behind the navbar contents but over the page because nav is z-100
-            transform: "translateY(-100%)", // Initial state
-            visibility: "hidden" // Hide completely when not open to prevent interaction issues
-          }}
-        >
-          <ul ref={mobileLinksRef} className="flex flex-col items-center gap-8">
-            {NAV_ITEMS.map((item) => (
-              <li key={item.label} className="overflow-hidden">
-                <TransitionLink
-                  href={item.href}
-                  onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleScrollTo(e, item.href)}
-                  className="font-serif text-4xl text-cream-500 hover:text-white transition-colors uppercase tracking-widest"
-                >
-                  {item.label}
-                </TransitionLink>
-              </li>
-            ))}
-            <li className="mt-8 overflow-hidden">
-              <Button
-                asChild
-                variant="outline"
-                className="border-cream-500/20 text-cream-500 hover:bg-cream-500 hover:text-charcoal-950 font-sans tracking-widest text-xs uppercase px-12 transition-colors duration-500"
-              >
-                <a href="/2026katalog" target="_blank" rel="noopener noreferrer">
-                  Kataloğu İncele
-                </a>
-              </Button>
-            </li>
-          </ul>
-        </div>
       </nav>
+
+      {/* Mobile Full Screen Menu */}
+      <div
+        ref={mobileMenuRef}
+        className="lg:hidden fixed inset-0 bg-charcoal-950 flex flex-col justify-center items-center"
+        style={{ 
+          zIndex: 40, // Below nav (z-50) but above page content
+          transform: "translateY(-100%)", // Initial state
+          visibility: "hidden" // Hide completely when not open
+        }}
+      >
+        <ul ref={mobileLinksRef} className="flex flex-col items-center gap-8">
+          {NAV_ITEMS.map((item) => (
+            <li key={item.label} className="overflow-hidden">
+              <TransitionLink
+                href={item.href}
+                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleScrollTo(e, item.href)}
+                className="font-serif text-4xl text-cream-500 hover:text-white transition-colors uppercase tracking-widest"
+              >
+                {item.label}
+              </TransitionLink>
+            </li>
+          ))}
+          <li className="mt-8 overflow-hidden">
+            <Button
+              asChild
+              variant="outline"
+              className="border-cream-500/20 text-cream-500 hover:bg-cream-500 hover:text-charcoal-950 font-sans tracking-widest text-xs uppercase px-12 transition-colors duration-500"
+            >
+              <a href="/2026katalog" target="_blank" rel="noopener noreferrer">
+                Kataloğu İncele
+              </a>
+            </Button>
+          </li>
+        </ul>
+      </div>
     </>
   );
 }
