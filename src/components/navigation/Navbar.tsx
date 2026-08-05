@@ -214,12 +214,8 @@ export default function Navbar() {
       {/* Mobile Full Screen Menu */}
       <div
         ref={mobileMenuRef}
-        className="lg:hidden fixed inset-0 bg-charcoal-950 flex flex-col justify-center items-center"
-        style={{ 
-          zIndex: 40, // Below nav (z-50) but above page content
-          transform: "translateY(-100%)", // Initial state
-          visibility: "hidden" // Hide completely when not open
-        }}
+        className="lg:hidden fixed inset-0 bg-charcoal-950 flex flex-col justify-center items-center -translate-y-full invisible"
+        style={{ zIndex: 40 }}
       >
         <ul ref={mobileLinksRef} className="flex flex-col items-center gap-8">
           {NAV_ITEMS.map((item) => (
