@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import Hero from "@/components/Hero";
-import Showroom from "@/components/Showroom";
+import dynamic from "next/dynamic";
+
+const Showroom = dynamic(() => import("@/components/Showroom"), { ssr: true });
 
 export const metadata: Metadata = {
   title: "Sedirkon Mobilya | Zanaatın ve Lüksün Zirvesi",
