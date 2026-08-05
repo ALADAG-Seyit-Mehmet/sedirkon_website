@@ -180,10 +180,13 @@ export default function Navbar() {
               <Search size={18} strokeWidth={1.5} />
             </button>
             <Button
+              asChild
               variant="outline"
               className="border-cream-500/20 text-cream-500 hover:bg-cream-500 hover:text-charcoal-950 font-sans tracking-widest text-xs uppercase px-8 transition-colors duration-500"
             >
-              Kataloğu İncele
+              <a href="/sedirkon-2026-katalog.pdf" target="_blank" rel="noopener noreferrer">
+                Kataloğu İncele
+              </a>
             </Button>
           </div>
 
@@ -230,10 +233,13 @@ export default function Navbar() {
             ))}
             <li className="mt-8 overflow-hidden">
               <Button
+                asChild
                 variant="outline"
                 className="border-cream-500/20 text-cream-500 hover:bg-cream-500 hover:text-charcoal-950 font-sans tracking-widest text-xs uppercase px-12 transition-colors duration-500"
               >
-                Kataloğu İncele
+                <a href="/sedirkon-2026-katalog.pdf" target="_blank" rel="noopener noreferrer">
+                  Kataloğu İncele
+                </a>
               </Button>
             </li>
           </ul>
