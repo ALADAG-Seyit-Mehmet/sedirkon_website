@@ -71,13 +71,6 @@ export default function Navbar() {
         (window as any).lenis.stop();
       }
 
-      gsap.to(mobileMenuRef.current, {
-        yPercent: 0,
-        autoAlpha: 1, // handles both opacity and visibility
-        duration: 0.8,
-        ease: "power4.inOut",
-      });
-
       gsap.fromTo(
         links,
         { y: 40, opacity: 0 },
@@ -91,19 +84,11 @@ export default function Navbar() {
         }
       );
     } else {
-      gsap.to(mobileMenuRef.current, {
-        yPercent: -100,
-        autoAlpha: 0, // handles both opacity and visibility
-        duration: 0.8,
-        ease: "power4.inOut",
-        onComplete: () => {
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          if (typeof window !== "undefined" && (window as any).lenis) {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            (window as any).lenis.start();
-          }
-        }
-      });
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      if (typeof window !== "undefined" && (window as any).lenis) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (window as any).lenis.start();
+      }
     }
   }, [isMobileMenuOpen]);
 
@@ -214,7 +199,10 @@ export default function Navbar() {
       {/* Mobile Full Screen Menu */}
       <div
         ref={mobileMenuRef}
-        className="lg:hidden fixed inset-0 bg-charcoal-950 flex flex-col justify-center items-center -translate-y-full invisible"
+        className={cn(
+          "lg:hidden fixed inset-0 bg-charcoal-950 flex flex-col justify-center items-center transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]",
+          isMobileMenuOpen ? "translate-y-0 opacity-100 visible" : "-translate-y-full opacity-0 invisible"
+        )}
         style={{ zIndex: 40 }}
       >
         <ul ref={mobileLinksRef} className="flex flex-col items-center gap-8">
