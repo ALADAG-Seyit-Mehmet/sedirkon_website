@@ -15,6 +15,14 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/2026katalog",
+        destination: "/sedirkon-2026-katalog_compressed.pdf",
+      },
+    ];
+  },
 };
 
 export default nextConfig;

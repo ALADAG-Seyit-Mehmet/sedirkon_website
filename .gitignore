@@ -50,4 +50,5 @@ scrape_images.js
 
 # Large Media
 *.pdf
+!public/sedirkon-2026-katalog_compressed.pdf
 public/Create_an_second_ultra_reali.mp4
