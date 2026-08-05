@@ -8,6 +8,7 @@ import { Menu, X, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { tokens } from "@/styles/tokens";
 import { useSearch } from "@/components/search/SearchContext";
+import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
   { label: "Ana Sayfa", href: "/" },
