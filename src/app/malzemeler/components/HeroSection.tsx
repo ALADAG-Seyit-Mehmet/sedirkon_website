@@ -11,11 +11,11 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-charcoal-950/50 z-10 pointer-events-none" />
         <div className="w-full h-full animate-breathe origin-center">
           <SmartImage 
-            src="https://images.unsplash.com/photo-1546593064-053d21199be1?auto=format&fit=crop&q=90&w=2000"
-            alt="Makro Ahşap Dokusu"
+            src="/textures/materials_hero_ai.png"
+            alt="Lüks Malzeme Dokusu"
             fill
             sizes="100vw"
-            className="object-cover"
+            className="object-cover opacity-80"
             priority
           />
         </div>

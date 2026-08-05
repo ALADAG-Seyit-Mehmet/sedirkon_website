@@ -13,6 +13,8 @@ import { Specifications } from "./components/Specifications";
 import { RelatedCollection } from "./components/RelatedCollection";
 import { RecentlyViewed } from "@/components/RecentlyViewed";
 
+import { ProductGallery } from "./components/ProductGallery";
+
 export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
   const params = await props.params;
   const product = MOCK_PRODUCTS.find((p) => p.slug === params.slug);
@@ -42,6 +44,9 @@ export default async function ProductDetailPage(props: { params: Promise<{ slug:
 
       {/* 2. Product Philosophy */}
       <PhilosophySection product={product} />
+
+      {/* 2.5 Product Gallery for remaining images */}
+      <ProductGallery product={product} />
 
       {/* 3. Craftsmanship Story */}
       <CraftsmanshipSection product={product} />

@@ -31,7 +31,7 @@ export function MaskReveal({
       className: cn("overflow-hidden block", className),
       ...rest
     },
-    <div className="will-change-transform">
+    <div className="will-change-transform w-full h-full">
       {children}
     </div>
   );

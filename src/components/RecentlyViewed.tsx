@@ -51,7 +51,7 @@ export function RecentlyViewed({ currentProductId }: RecentlyViewedProps) {
         {recentProducts.map((product, idx) => (
           <FadeIn key={product.id} delay={0.2 + (idx * 0.1)} duration={1.5}>
             <Link href={`/koleksiyon/${product.slug}`} className="group block">
-              <div className="w-full aspect-[3/4] bg-charcoal-900 relative overflow-hidden">
+              <div className="w-full aspect-[4/3] bg-charcoal-900 relative overflow-hidden">
                 <SmartImage 
                   src={product.images[0]} 
                   alt={product.title} 

@@ -20,7 +20,32 @@ export default async function CollectionPage(props: { searchParams?: Promise<{ k
 
   return (
     <main className="min-h-screen bg-charcoal-950 pt-32 pb-section">
-      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Sedirkon Mobilya Koleksiyonu",
+            "description": "Zanaat ve ustalığın buluştuğu zamansız yaşam alanları. Sedirkon mobilya koleksiyonunu keşfedin.",
+            "url": "https://sedirkon.com/koleksiyon",
+            "mainEntity": {
+              "@type": "ItemList",
+              "itemListElement": filteredProducts.map((product, idx) => ({
+                "@type": "ListItem",
+                "position": idx + 1,
+                "item": {
+                  "@type": "Product",
+                  "name": product.title,
+                  "description": product.description,
+                  "image": `https://sedirkon.com${product.images[0]}`,
+                  "url": `https://sedirkon.com/koleksiyon/${product.slug}`
+                }
+              }))
+            }
+          })
+        }}
+      />
       {/* Header */}
       <section className="container mx-auto px-md md:px-xl mb-4xl">
         <div className="max-w-4xl">
@@ -61,9 +86,7 @@ export default async function CollectionPage(props: { searchParams?: Promise<{ k
       <section className="container mx-auto px-md md:px-xl">
         <div className="columns-1 md:columns-2 gap-x-xl md:gap-x-24">
           {filteredProducts.map((product, index) => {
-            // Dergi (editorial) hissi için resim oranlarını dönüşümlü kullanıyoruz
-            const isPortrait = index % 2 !== 0;
-            const aspectClass = isPortrait ? "aspect-3/4" : "aspect-4/3";
+            const aspectClass = "aspect-[4/3]";
 
             return (
               <FadeIn key={product.id} delay={0.2 + ((index % 4) * 0.1)} duration={1.2} className="break-inside-avoid mb-16 md:mb-24">

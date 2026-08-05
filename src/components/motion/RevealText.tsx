@@ -35,7 +35,7 @@ export function RevealText({
       ...rest
     },
     words.map((word, idx) => (
-      <span key={idx} className="overflow-hidden inline-flex mr-[0.3em]">
+      <span key={idx} className="overflow-hidden inline-flex mr-[0.3em] py-[0.2em] -my-[0.2em]">
         <span className="will-change-transform inline-block">
           {word}
         </span>

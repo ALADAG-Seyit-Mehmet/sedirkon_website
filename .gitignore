@@ -42,3 +42,12 @@ next-env.d.ts
 
 # markdown files
 *.md
+
+# Scratch and Temp files
+*.py
+*.txt
+scrape_images.js
+
+# Large Media
+*.pdf
+public/Create_an_second_ultra_reali.mp4

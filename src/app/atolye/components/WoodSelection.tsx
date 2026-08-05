@@ -7,10 +7,10 @@ export function WoodSelection() {
   return (
     <section className="w-full py-4xl md:py-section px-md md:px-xl container mx-auto bg-charcoal-950">
       
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-2xl md:gap-4xl items-center">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-md md:gap-lg items-center">
         
         {/* Left: Text */}
-        <div className="md:col-span-5 flex flex-col justify-center order-2 md:order-1">
+        <div className="md:col-span-7 flex flex-col justify-center order-2 md:order-1 pr-0 lg:pr-12">
           <FadeIn delay={0.2}>
             <span className="text-bronze-500 font-sans text-xs tracking-[0.3em] uppercase mb-md block">
               01. Kaynağa Saygı
@@ -19,7 +19,7 @@ export function WoodSelection() {
           <RevealText 
             text="Ahşabın Seçimi" 
             as="h2" 
-            className="text-4xl md:text-6xl font-serif text-cream-500 tracking-tight leading-none mb-xl"
+            className="text-4xl md:text-6xl font-serif text-cream-500 tracking-tight leading-none mb-6 md:mb-8"
           />
           <FadeIn delay={0.6} duration={1.5}>
             <p className="text-cream-500/70 font-sans text-lg md:text-xl font-light leading-relaxed">
@@ -31,14 +31,14 @@ export function WoodSelection() {
         </div>
 
         {/* Right: Macro Image */}
-        <div className="md:col-span-7 order-1 md:order-2">
-          <MaskReveal direction="left-to-right" duration={1.8}>
-            <div className="w-full aspect-[4/5] md:aspect-square bg-charcoal-900 relative">
+        <div className="md:col-span-5 flex items-center justify-center order-1 md:order-2">
+          <MaskReveal direction="right-to-left" duration={1.8} className="w-full max-w-[420px]">
+            <div className="w-full aspect-square bg-charcoal-900 relative rounded-2xl overflow-hidden border border-cream-500/10 shadow-2xl">
               <SmartImage 
-                src="https://images.unsplash.com/photo-1558098329-a11cff621064?auto=format&fit=crop&q=90&w=1600"
-                alt="Premium ahşap damarları"
+                src="/images/wood_selection_master.png"
+                alt="Sedirkon Master Wood Selection"
                 fill
-                sizes="(max-width: 768px) 100vw, 60vw"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover scale-105 hover:scale-100 transition-transform duration-[3s] ease-out"
               />
             </div>

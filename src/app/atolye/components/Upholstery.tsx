@@ -7,9 +7,9 @@ import { RevealText } from "@/components/motion/RevealText";
 import { cn } from "@/lib/utils";
 
 const UPHOLSTERY_IMAGES = [
-  "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=90&w=1200",
-  "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=90&w=1200",
-  "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=90&w=1200"
+  "/images/upholstery_stretching.png",
+  "/images/upholstery_stitching.png",
+  "/images/upholstery_cushion.png"
 ];
 
 export function Upholstery() {
@@ -38,10 +38,10 @@ export function Upholstery() {
           <RevealText 
             text="Döşeme Sanatı" 
             as="h2" 
-            className="text-4xl md:text-5xl font-serif text-cream-500 tracking-tight leading-tight mb-xl"
+            className="text-4xl md:text-5xl font-serif text-cream-500 tracking-tight leading-tight mb-6 md:mb-8"
           />
           <FadeIn delay={0.6} duration={1.5}>
-            <p className="text-cream-500/70 font-sans text-lg md:text-xl font-light leading-relaxed mb-lg">
+            <p className="text-cream-500/70 font-sans text-lg md:text-xl font-light leading-relaxed mb-4 md:mb-6">
               Kumaşın ve derinin iskeletle buluştuğu an, mobilyanın karakterinin tamamlandığı andır. 
               En yüksek kalitedeki kaz tüyü katmanları, HR süngerler ve özel İtalyan ketenleri...
             </p>
@@ -70,7 +70,7 @@ export function Upholstery() {
                     alt={`Döşeme Detayı ${idx + 1}`}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-cover"
+                    className="object-cover grayscale-[20%] contrast-[1.1] brightness-[0.85] sepia-[15%]"
                   />
                 </div>
               ))}

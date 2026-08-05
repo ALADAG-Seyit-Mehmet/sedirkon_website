@@ -27,115 +27,277 @@ export type Product = {
 
 export const MOCK_PRODUCTS: Product[] = [
   {
-    id: "1",
-    slug: "luna-kanepe",
-    title: "Luna Kanepe",
-    subtitle: "Zarif kıvrımlar, sonsuz konfor.",
-    description: "Luna Kanepe, organik formları ve heykelsi duruşuyla yaşam alanınızın merkezinde yer almayı hak ediyor. Özel dokuma keten kumaşı ve gizli masif ahşap iskeletiyle zamansız bir başyapıt.",
+    id: "4",
+    slug: "defne",
+    title: "Defne Koltuk Takımı",
+    subtitle: "Defne serisi ile yaşam alanlarınıza yeni bir soluk.",
+    description: "Zarif altın detaylar ve lüks dokularla sofistike bir duruş. Metalik altın çerçeveler ve ince bukle kumaş kombinasyonuyla evinizde prestijli bir atmosfer.",
     category: "oturma-gruplari",
-    images: [
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=90&w=2000",
-      "https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&q=90&w=2000",
-      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&q=90&w=2000",
-    ],
-    dimensions: "G: 240cm x D: 105cm x Y: 78cm",
+    images: ["/takımlar/defne1.webp", "/takımlar/defne2.webp", "/takımlar/defne3.webp"],
+    dimensions: "G: 230cm | D: 93cm | Y: 70cm",
     materials: [
-      { id: "m1", name: "Premium Keten - Ekru", type: "fabric", colorCode: "#F5F5F0" },
-      { id: "m2", name: "Buklet - Antrasit", type: "fabric", colorCode: "#333333" },
-      { id: "m3", name: "Doğal Ceviz (Ayaklar)", type: "wood", colorCode: "#5C4033" },
+      { id: "m1", name: "Troya Bukle", type: "fabric", colorCode: "#F5F5F0" },
+      { id: "m3", name: "Titanyum Gold Metal", type: "metal", colorCode: "#D4AF37" },
     ],
-    relatedProducts: ["terra-berjer", "nox-yemek-masasi"],
-    designerQuote: "Bir mobilya sadece oturulan bir eşya değil, mekana ruhunu veren sessiz bir heykeltıraştır.",
-    philosophy: [
-      "Luna'nın tasarım yolculuğu, doğadaki kusursuz asimetriyi incelemekle başladı. Amacımız, köşeli ve katı formların egemen olduğu modern evlere nefes aldıran, akışkan bir form yaratmaktı.",
-      "İç iskeletinden dış kumaşına kadar her detay, ustalarımızın ellerinde yavaşça şekillendi. Makineleşmiş hız çağında, yavaşlığın ve ustalığın lüksünü kutluyoruz."
-    ],
-    craftsmanshipImages: [
-      "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&q=90&w=1600",
-      "https://images.unsplash.com/photo-1581428982868-e410dd047a90?auto=format&fit=crop&q=90&w=1600"
-    ],
-    macroImages: [
-      "https://images.unsplash.com/photo-1580584126903-c17d41830450?auto=format&fit=crop&q=90&w=1200",
-      "https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?auto=format&fit=crop&q=90&w=1200",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=90&w=1200"
-    ],
-    specifications: [
-      { label: "İskelet", value: "Fırınlanmış Gürgen ve Huş Kontrplak" },
-      { label: "Oturum Süngeri", value: "35 HR Soft, Kaz Tüyü Katmanlı" },
-      { label: "Ayak", value: "Masif Amerikan Cevizi, Mat Cila" },
-      { label: "Kumaş", value: "%100 İtalyan Keten" },
-      { label: "Üretim Süresi", value: "6 - 8 Hafta (El İşçiliği)" }
-    ]
+    relatedProducts: [],
+      specifications: [
+        { label: "Kumaş", value: "TROYA" },
+        { label: "Konsept", value: "Modern Bukle" },
+        { label: "Kanepe", value: "G: 230 | D: 93 | Y: 70 cm" },
+        { label: "Berjer", value: "G: 80 | D: 80 | Y: 80 cm" }
+      ],
   },
   {
-    id: "2",
-    slug: "terra-berjer",
-    title: "Terra Berjer",
-    subtitle: "Dinamik denge, kusursuz oran.",
-    description: "Oturma deneyimini yeniden tanımlayan Terra, minimalist metal iskeleti ve gövdeyi saran lüks deri kaplamasıyla hem bir sanat eseri hem de bir dinlenme alanı.",
+    id: "5",
+    slug: "esinti",
+    title: "Esinti Balkon Takımı",
+    subtitle: "Esinti serisi ile yaşam alanlarınıza yeni bir soluk.",
+    description: "Modern ve estetik hatların zarafetle buluştuğu Esinti serisi. Yaşam alanlarınıza ferahlık ve konfor katmak için özenle tasarlandı.",
     category: "oturma-gruplari",
-    images: [
-      "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&q=90&w=2000",
-      "https://images.unsplash.com/photo-1592078615290-033ee584e267?auto=format&fit=crop&q=90&w=2000",
-    ],
-    dimensions: "G: 85cm x D: 90cm x Y: 82cm",
+    images: ["/takımlar/esinti2.webp", "/takımlar/esinti3.webp", "/takımlar/esinti4.webp", "/takımlar/esinti5.webp"],
+    dimensions: "Detaylı bilgi için iletişime geçiniz.",
     materials: [
-      { id: "m4", name: "Anilin Deri - Taba", type: "leather", colorCode: "#8B4513" },
-      { id: "m5", name: "Mat Siyah Metal", type: "metal", colorCode: "#1A1A1A" },
+      { id: "m1", name: "Premium Keten", type: "fabric", colorCode: "#F5F5F0" },
+      { id: "m3", name: "Masif Gürgen (Ayaklar)", type: "wood", colorCode: "#5C4033" },
     ],
-    relatedProducts: ["luna-kanepe"],
-    designerQuote: "Zıtlıkların muazzam çekimi: Soğuk metalin keskinliği ile sıcak derinin sarıp sarmalayan yumuşaklığı.",
-    philosophy: [
-      "Terra Berjer, yerçekimiyle oynayan ince metal iskeletiyle mekanda adeta süzülüyor hissi yaratır. Minimalist bir strüktürün, insana nasıl bu kadar yüksek bir konfor sunabileceği sorusunun cevabıdır."
-    ],
-    craftsmanshipImages: [
-      "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=90&w=1600"
-    ],
-    macroImages: [
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=90&w=1200",
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=90&w=1200"
-    ],
-    specifications: [
-      { label: "İskelet", value: "Elektrostatik Boyalı Bükme Çelik" },
-      { label: "Döşeme", value: "Poliüretan Kalıp Sünger" },
-      { label: "Kılıf", value: "Doğal Gözenekli Anilin Dana Derisi" }
-    ]
+    relatedProducts: [],
+      specifications: [
+        { label: "Kumaş", value: "Özel" },
+        { label: "Konsept", value: "Ferah Yaşam" },
+        { label: "Ölçüler", value: "Detaylı bilgi için iletişime geçiniz." }
+      ],
   },
   {
-    id: "3",
-    slug: "nox-yemek-masasi",
-    title: "Nox Yemek Masası",
-    subtitle: "Ahşabın en yalın hali.",
-    description: "Geniş aile yemekleri ve özel davetler için tasarlandı. Nox, tek parça ceviz tablası ve monoblok metal ayaklarıyla endüstriyel lüksü yeniden yorumluyor.",
-    category: "yemek-odalari",
-    images: [
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=90&w=2000",
-      "https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&q=90&w=2000",
-    ],
-    dimensions: "G: 220cm x D: 100cm x Y: 76cm",
+    id: "6",
+    slug: "goksu",
+    title: "Göksu Koltuk Takımı",
+    subtitle: "Göksu serisi ile yaşam alanlarınıza yeni bir soluk.",
+    description: "Nordik minimalizmin cesur renk paletleriyle füzyonu. Bordo ve kremin cesur karışımı, masif gürgen ayaklar ve cam detaylarla mükemmel bir denge sağladı.",
+    category: "oturma-gruplari",
+    images: ["/takımlar/göksu1.webp", "/takımlar/göksu2.webp", "/takımlar/göksu3.webp"],
+    dimensions: "G: 240cm | D: 92cm | Y: 82cm",
     materials: [
-      { id: "m6", name: "Amerikan Cevizi", type: "wood", colorCode: "#4A3525" },
-      { id: "m5", name: "Mat Siyah Metal", type: "metal", colorCode: "#1A1A1A" },
+      { id: "m1", name: "İpek Kadife", type: "fabric", colorCode: "#F5F5F0" },
+      { id: "m3", name: "Masif Gürgen (Ayaklar)", type: "wood", colorCode: "#5C4033" },
     ],
-    relatedProducts: ["luna-kanepe"],
-    designerQuote: "Her ağaç gövdesi, doğanın milyonlarca yıllık günlüğüdür. Biz sadece bu günlüğü okunabilir kılıyoruz.",
-    philosophy: [
-      "Nox Yemek Masası, doğanın anarşik güzelliği ile insan yapımı geometrinin mükemmel birleşimini temsil eder. Üst tabladaki doğal damarlar, her masayı dünyada tek ve eşsiz kılar."
+    relatedProducts: [],
+      specifications: [
+        { label: "Kumaş", value: "İPEK" },
+        { label: "Konsept", value: "Soft Kadife" },
+        { label: "Kanepe", value: "G: 240 | D: 92 | Y: 82 cm" },
+        { label: "Berjer", value: "G: 79 | D: 92 | Y: 95 cm" }
+      ],
+  },
+  {
+    id: "7",
+    slug: "ilkim",
+    title: "İlkim Koltuk Takımı",
+    subtitle: "İlkim serisi ile yaşam alanlarınıza yeni bir soluk.",
+    description: "Yumuşak dokular ve organik ahşap formların huzur veren buluşması. Birinci sınıf gürgen detayları ve dokulu keten döşemesiyle hazırlanan uyumlu modern yerleşim.",
+    category: "oturma-gruplari",
+    images: ["/takımlar/ilkim1.webp", "/takımlar/ilkim2.webp", "/takımlar/ilkim3.webp"],
+    dimensions: "G: 244cm | D: 91cm | Y: 82cm",
+    materials: [
+      { id: "m1", name: "Dokulu Keten", type: "fabric", colorCode: "#F5F5F0" },
+      { id: "m3", name: "Masif Gürgen (Ayaklar)", type: "wood", colorCode: "#5C4033" },
     ],
-    craftsmanshipImages: [
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=90&w=1600"
+    relatedProducts: [],
+      specifications: [
+        { label: "Kumaş", value: "TROYA/CASA" },
+        { label: "Konsept", value: "Rafine Doku" },
+        { label: "Kanepe", value: "G: 244 | D: 91 | Y: 82 cm" },
+        { label: "Berjer", value: "G: 63 | D: 90 | Y: 94 cm" }
+      ],
+  },
+  {
+    id: "8",
+    slug: "kehribar",
+    title: "Kehribar Koltuk Takımı",
+    subtitle: "Kehribar serisi ile yaşam alanlarınıza yeni bir soluk.",
+    description: "Sıcaklık ve klasik zarafetin modern konforla yeniden yorumlanması. Derin oturum alanı ve peluş sırt minderleriyle üstün rahatlık arayanlar için tasarlandı.",
+    category: "oturma-gruplari",
+    images: ["/takımlar/kehribar1.webp", "/takımlar/kehribar2.webp", "/takımlar/kehribar3.webp"],
+    dimensions: "G: 228cm | D: 90cm | Y: 83cm",
+    materials: [
+      { id: "m1", name: "Amazon Kumaş", type: "fabric", colorCode: "#F5F5F0" },
+      { id: "m3", name: "Masif Gürgen (Ayaklar)", type: "wood", colorCode: "#5C4033" },
     ],
-    macroImages: [
-      "https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?auto=format&fit=crop&q=90&w=1200",
-      "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=90&w=1200"
+    relatedProducts: [],
+      specifications: [
+        { label: "Kumaş", value: "AMAZON" },
+        { label: "Konsept", value: "Lüks Yumuşaklık" },
+        { label: "Kanepe", value: "G: 228 | D: 90 | Y: 83 cm" },
+        { label: "Berjer", value: "G: 79 | D: 92 | Y: 83 cm" }
+      ],
+  },
+  {
+    id: "9",
+    slug: "maksi",
+    title: "Maksi Koltuk Takımı",
+    subtitle: "Maksi serisi ile yaşam alanlarınıza yeni bir soluk.",
+    description: "Modern hatların ve geniş oturum alanlarının ustaca birleşimi. Aile boyu konfor için tasarlanan ekstra geniş yapısı ve fonksiyonel özellikleriyle yaşam alanınızın yeni odak noktası.",
+    category: "oturma-gruplari",
+    images: ["/takımlar/maksi1.webp", "/takımlar/maksi2.webp", "/takımlar/maksi3.webp"],
+    dimensions: "G: 208cm | D: 80cm | Y: 85cm",
+    materials: [
+      { id: "m1", name: "Mirza Kumaş", type: "fabric", colorCode: "#F5F5F0" },
+      { id: "m3", name: "Masif Gürgen (Ayaklar)", type: "wood", colorCode: "#5C4033" },
     ],
-    specifications: [
-      { label: "Üst Tabla", value: "40mm Kalınlığında Masif Amerikan Cevizi" },
-      { label: "Yüzey Koruma", value: "Doğal Yağlı, Su İtici Mat Katman" },
-      { label: "Ayak", value: "Lazer Kesim Monoblok Çelik" },
-      { label: "Kapasite", value: "8 - 10 Kişilik Oturum Alanı" }
-    ]
-  }
+    relatedProducts: [],
+      specifications: [
+        { label: "Kumaş", value: "MİRZA" },
+        { label: "Konsept", value: "Şehirli Modern" },
+        { label: "Kanepe", value: "G: 208 | D: 80 | Y: 85 cm" },
+        { label: "Berjer", value: "G: 74 | D: 80 | Y: 85 cm" }
+      ],
+  },
+  {
+    id: "10",
+    slug: "suna",
+    title: "Suna Koltuk Takımı",
+    subtitle: "Suna serisi ile yaşam alanlarınıza yeni bir soluk.",
+    description: "Organik kıvrımları ve ekstra derin oturum alanıyla (110cm) bulutların üzerinde hissettiren eşsiz bir deneyim. Troya kumaşın yumuşak dokusuyla modern yaşam alanlarında zarif bir sığınak.",
+    category: "oturma-gruplari",
+    images: ["/takımlar/suna1.webp", "/takımlar/suna2.webp", "/takımlar/suna3.webp"],
+    dimensions: "G: 244cm | D: 110cm | Y: 83cm",
+    materials: [
+      { id: "m1", name: "Troya Kumaş", type: "fabric", colorCode: "#F5F5F0" },
+      { id: "m3", name: "Masif Gürgen (Ayaklar)", type: "wood", colorCode: "#5C4033" },
+    ],
+    relatedProducts: [],
+      specifications: [
+        { label: "Kumaş", value: "TROYA" },
+        { label: "Konsept", value: "Organik Lüks" },
+        { label: "Kanepe", value: "G: 244 | D: 110 | Y: 83 cm" },
+        { label: "Berjer", value: "G: 79 | D: 92 | Y: 83 cm" }
+      ],
+  },
+  {
+    id: "11",
+    slug: "suna-kose",
+    title: "Suna Köşe Takımı",
+    subtitle: "Suna serisi ile yaşam alanlarınıza yeni bir soluk.",
+    description: "Organik kıvrımları ve ekstra geniş oturum alanıyla bulutların üzerinde hissettiren köşe takımı konforu. Troya kumaşın yumuşak dokusuyla kalabalık aileler için zarif bir sığınak.",
+    category: "oturma-gruplari",
+    images: ["/takımlar/sunaköşe1.webp", "/takımlar/sunaköşe2.webp", "/takımlar/sunaköşe3.webp"],
+    dimensions: "G: 320x320cm | D: 110cm | Y: 83cm",
+    materials: [
+      { id: "m1", name: "Troya Kumaş", type: "fabric", colorCode: "#F5F5F0" },
+      { id: "m3", name: "Masif Gürgen (Ayaklar)", type: "wood", colorCode: "#5C4033" },
+    ],
+    relatedProducts: [],
+      specifications: [
+        { label: "Kumaş", value: "TROYA" },
+        { label: "Konsept", value: "Organik Lüks" },
+        { label: "Köşe", value: "G: 320x320 | D: 110 | Y: 83 cm" },
+        { label: "Berjer", value: "G: 79 | D: 92 | Y: 83 cm" }
+      ],
+  },
+  {
+    id: "12",
+    slug: "v2goksu",
+    title: "V2 Göksu Koltuk Takımı",
+    subtitle: "V2 serisi ile yaşam alanlarınıza yeni bir soluk.",
+    description: "Zamansız kadifenin modern hatlarla buluştuğu Göksu serisi, konforu en şık haliyle sunuyor. Pastel tonlar ve rafine detayların mükemmel dengesi.",
+    category: "oturma-gruplari",
+    images: ["/takımlar/v2göksu1.webp", "/takımlar/v2göksu2.webp", "/takımlar/v2göksu3.webp"],
+    dimensions: "G: 240cm | D: 92cm | Y: 82cm",
+    materials: [
+      { id: "m1", name: "Neva Kadife", type: "fabric", colorCode: "#F5F5F0" },
+      { id: "m3", name: "Masif Gürgen (Ayaklar)", type: "wood", colorCode: "#5C4033" },
+    ],
+    relatedProducts: [],
+      specifications: [
+        { label: "Kumaş", value: "NEVA" },
+        { label: "Konsept", value: "Doğal Keten" },
+        { label: "Kanepe", value: "G: 240 | D: 92 | Y: 82 cm" },
+        { label: "Berjer", value: "G: 79 | D: 92 | Y: 95 cm" }
+      ],
+  },
+  {
+    id: "13",
+    slug: "v2ilkim",
+    title: "V2 İlkim Koltuk Takımı",
+    subtitle: "V2 serisi ile yaşam alanlarınıza yeni bir soluk.",
+    description: "Organik formların ve yumuşak geçişlerin mükemmel uyumu. Her detayda hissedilen sıcaklık.",
+    category: "oturma-gruplari",
+    images: ["/takımlar/v2ilkim1.webp", "/takımlar/v2ilkim2.webp", "/takımlar/v2ilkim3.webp"],
+    dimensions: "G: 244cm | D: 91cm | Y: 82cm",
+    materials: [
+      { id: "m1", name: "Troya Keten", type: "fabric", colorCode: "#F5F5F0" },
+      { id: "m3", name: "Masif Gürgen (Ayaklar)", type: "wood", colorCode: "#5C4033" },
+    ],
+    relatedProducts: [],
+      specifications: [
+        { label: "Kumaş", value: "TROYA" },
+        { label: "Konsept", value: "Zamansız Tasarım" },
+        { label: "Kanepe", value: "G: 244 | D: 91 | Y: 82 cm" },
+        { label: "Berjer", value: "G: 63 | D: 90 | Y: 94 cm" }
+      ],
+  },
+  {
+    id: "14",
+    slug: "v2kehribar",
+    title: "V2 Kehribar Koltuk Takımı",
+    subtitle: "V2 serisi ile yaşam alanlarınıza yeni bir soluk.",
+    description: "Sıcaklık ve lüksün modern formda yeniden doğuşu. Yenilenen detaylar ve güçlendirilmiş oturum ile eşsiz bir konfor deneyimi.",
+    category: "oturma-gruplari",
+    images: ["/takımlar/v2kehribar1.webp", "/takımlar/v2kehribar2.webp", "/takımlar/v2kehribar3.webp"],
+    dimensions: "G: 228cm | D: 90cm | Y: 83cm",
+    materials: [
+      { id: "m1", name: "Puka Kumaş", type: "fabric", colorCode: "#F5F5F0" },
+      { id: "m3", name: "Masif Gürgen (Ayaklar)", type: "wood", colorCode: "#5C4033" },
+    ],
+    relatedProducts: [],
+      specifications: [
+        { label: "Kumaş", value: "PUKA" },
+        { label: "Konsept", value: "Zengin Doku" },
+        { label: "Kanepe", value: "G: 228 | D: 90 | Y: 83 cm" },
+        { label: "Berjer", value: "G: 79 | D: 92 | Y: 83 cm" }
+      ],
+  },
+  {
+    id: "15",
+    slug: "v2suna-kose",
+    title: "V2 Suna Köşe Takımı",
+    subtitle: "V2 serisi ile yaşam alanlarınıza yeni bir soluk.",
+    description: "Modern ve rafine dokunuşlarla yenilenen Suna Köşe V2, organik kıvrımları ve üstün konforu bir arada sunuyor. Yaşam alanlarınıza ferahlık ve şıklık katan yeni nesil tasarım.",
+    category: "oturma-gruplari",
+    images: ["/takımlar/v2sunaköşe1.webp", "/takımlar/v2sunaköşe2.webp", "/takımlar/v2sunaköşe3.webp"],
+    dimensions: "G: 320x320cm | D: 110cm | Y: 83cm",
+    materials: [
+      { id: "m1", name: "Neva Kumaş", type: "fabric", colorCode: "#F5F5F0" },
+      { id: "m3", name: "Masif Gürgen (Ayaklar)", type: "wood", colorCode: "#5C4033" },
+    ],
+    relatedProducts: [],
+      specifications: [
+        { label: "Kumaş", value: "NEVA" },
+        { label: "Konsept", value: "Sofistike Konfor" },
+        { label: "Köşe", value: "G: 320x320 | D: 110 | Y: 83 cm" },
+        { label: "Berjer", value: "G: 79 | D: 92 | Y: 83 cm" }
+      ],
+  },
+  {
+    id: "16",
+    slug: "v3ilkim",
+    title: "V3 İlkim Koltuk Takımı",
+    subtitle: "V3 serisi ile yaşam alanlarınıza yeni bir soluk.",
+    description: "Şehirli yaşamın enerjisini yansıtan dinamik bir tasarım. Geniş oturum alanı ve modüler yapısıyla fonksiyonelliği ön plana çıkaran modern bir yaklaşım.",
+    category: "oturma-gruplari",
+    images: ["/takımlar/v3ilkim1.webp", "/takımlar/v3ilkim2.webp", "/takımlar/v3ilkim3.webp"],
+    dimensions: "G: 244cm | D: 91cm | Y: 82cm",
+    materials: [
+      { id: "m1", name: "Troya Keten", type: "fabric", colorCode: "#F5F5F0" },
+      { id: "m3", name: "Masif Gürgen (Ayaklar)", type: "wood", colorCode: "#5C4033" },
+    ],
+    relatedProducts: [],
+      specifications: [
+        { label: "Kumaş", value: "TROYA" },
+        { label: "Konsept", value: "Zamansız Tasarım" },
+        { label: "Kanepe", value: "G: 244 | D: 91 | Y: 82 cm" },
+        { label: "Berjer", value: "G: 63 | D: 90 | Y: 94 cm" }
+      ],
+  },
 ];
 
 export type Project = {
@@ -155,61 +317,6 @@ export type Project = {
 };
 
 export const MOCK_PROJECTS: Project[] = [
-  {
-    id: "p1",
-    slug: "villa-bosphorus",
-    title: "Villa Bosphorus",
-    location: "İstanbul, Türkiye",
-    year: "2023",
-    category: "Residential",
-    description: "Boğaz'ın zamansız silüetiyle bütünleşen, modern ve brütal hatlara sahip yalı projesi.",
-    clientGoal: "Müşteri, hem geniş aile buluşmalarına hem de özel davetlere ev sahipliği yapabilecek, doğa ile iç içe, gösterişten uzak ama lüks bir yaşam alanı talep etti.",
-    designPhilosophy: "Dış mekanın ışığını içeriye kesintisiz almak için devasa cam yüzeyler kullanıldı. Mobilyalarda ise meşe ve koyu anilin deri tercih edilerek mekanın soğuk brütalizmi ısıtıldı.",
-    images: [
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=90&w=1600",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=90&w=1600"
-    ],
-    macroImages: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=90&w=1200",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=90&w=1200"
-    ],
-    testimonial: "Sedirkon, sadece boşlukları doldurmadı; evin ruhunu baştan yazdı. Her bir mobilya parçası mekanın kendi doğasından doğmuş gibi hissettiriyor.",
-    usedProducts: ["luna-kanepe", "monolith-masa"]
-  },
-  {
-    id: "p2",
-    slug: "alpine-retreat",
-    title: "Alpine Retreat",
-    location: "Uludağ, Bursa",
-    year: "2022",
-    category: "Residential",
-    description: "Kış aylarının sert koşullarına tezat, içeride sıcak ve sarıp sarmalayan ahşap bir sığınak.",
-    clientGoal: "Modern bir dağ evi konsepti.",
-    designPhilosophy: "Ham ahşap dokular ve keten kumaşların yarattığı akustik konfor üzerine odaklanıldı.",
-    images: [
-      "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=90&w=1600"
-    ],
-    macroImages: [],
-    testimonial: "Sıcak, organik ve olağanüstü dayanıklı.",
-    usedProducts: ["luna-kanepe"]
-  },
-  {
-    id: "p3",
-    slug: "the-monochrome-office",
-    title: "The Monochrome Office",
-    location: "Levent, İstanbul",
-    year: "2024",
-    category: "Commercial",
-    description: "Uluslararası bir mimarlık ofisinin minimal, siyah ağırlıklı ve odaklanmayı artıran çalışma alanı.",
-    clientGoal: "Çalışanlar için sessiz, şık ve lüks bir ofis.",
-    designPhilosophy: "Mat siyah çelik ve ceviz ağacının otoriter uyumu.",
-    images: [
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=90&w=1600"
-    ],
-    macroImages: [],
-    testimonial: "Mimari ile iç mekanın kusursuz bütünleşmesi.",
-    usedProducts: ["monolith-masa"]
-  }
 ];
 
 export const CATEGORIES = [

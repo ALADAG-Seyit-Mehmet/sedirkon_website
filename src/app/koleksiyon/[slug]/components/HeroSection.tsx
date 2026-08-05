@@ -39,7 +39,7 @@ export function HeroSection({ product }: HeroSectionProps) {
           text={product.title} 
           as="h1" 
           delay={0.4}
-          className="text-6xl md:text-8xl lg:text-9xl font-serif text-cream-500 tracking-tighter"
+          className="text-6xl md:text-8xl lg:text-9xl font-serif text-cream-500 tracking-tighter justify-center"
         />
         
         <FadeIn delay={1.2} duration={1.5} className="mt-xl">

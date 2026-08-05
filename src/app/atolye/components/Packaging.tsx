@@ -12,13 +12,13 @@ export function Packaging() {
         {/* Left: Image */}
         <div className="w-full relative">
           <MaskReveal duration={1.5}>
-            <div className="w-full aspect-square bg-charcoal-900 relative">
+            <div className="w-full aspect-square bg-charcoal-900 relative overflow-hidden">
               <SmartImage 
-                src="https://images.unsplash.com/photo-1607344645866-009c320c5ab2?auto=format&fit=crop&q=90&w=1200"
+                src="/images/packaging_clean_bubble_wrap.jpg"
                 alt="Güvenli Paketleme"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover grayscale"
+                className="object-cover"
               />
             </div>
           </MaskReveal>
@@ -34,7 +34,7 @@ export function Packaging() {
           <RevealText 
             text="Paketleme Ritüeli" 
             as="h2" 
-            className="text-4xl md:text-5xl font-serif text-cream-500 tracking-tight leading-tight mb-xl"
+            className="text-4xl md:text-5xl font-serif text-cream-500 tracking-tight leading-tight mb-6 md:mb-8"
           />
           <FadeIn delay={0.6} duration={1.5}>
             <p className="text-cream-500/70 font-sans text-lg md:text-xl font-light leading-relaxed">

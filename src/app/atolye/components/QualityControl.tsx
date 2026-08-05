@@ -9,7 +9,7 @@ export function QualityControl() {
         
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           <FadeIn delay={0.2}>
-            <span className="text-bronze-500 font-sans text-xs tracking-[0.3em] uppercase mb-xl block">
+            <span className="text-bronze-500 font-sans text-xs tracking-[0.3em] uppercase mb-6 md:mb-8 block">
               07. Son Bakış
             </span>
           </FadeIn>
@@ -17,10 +17,10 @@ export function QualityControl() {
           <RevealText 
             text="Kalite Kontrol" 
             as="h2" 
-            className="text-4xl md:text-6xl font-serif text-cream-500 tracking-tight leading-none mb-2xl"
+            className="text-4xl md:text-6xl font-serif text-cream-500 tracking-tight leading-none mb-8 md:mb-10"
           />
 
-          <FadeIn delay={0.6} duration={1.5} className="mb-4xl">
+          <FadeIn delay={0.6} duration={1.5} className="mb-12 md:mb-16">
             <p className="text-cream-500/70 font-sans text-xl md:text-2xl font-light leading-relaxed">
               Atölyeden çıkmadan önce her bir parça, ustabaşı tarafından son kez gözlemlenir.
               Dokunulur, hissedilir ve test edilir. Kusursuzluk, Sedirkon&apos;da bir standart değil, bir zorunluluktur.
@@ -31,13 +31,13 @@ export function QualityControl() {
 
         {/* Cinematic Wide Image */}
         <FadeIn delay={1.0} duration={2}>
-          <div className="w-full aspect-21/9 bg-charcoal-950 relative overflow-hidden group">
+          <div className="w-full aspect-[21/9] bg-charcoal-950 relative overflow-hidden group">
             <SmartImage 
-              src="https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?auto=format&fit=crop&q=90&w=2000"
+              src="/images/quality_control_gloves.png"
               alt="Kalite Kontrol Süreci"
               fill
               sizes="100vw"
-              className="object-cover group-hover:scale-105 transition-transform duration-[3s] ease-out grayscale"
+              className="object-cover group-hover:scale-105 transition-transform duration-[3s] ease-out"
             />
             {/* Subtle center overlay text */}
             <div className="absolute inset-0 flex items-center justify-center bg-charcoal-950/40">

@@ -52,9 +52,11 @@ export function ScrollIndicator() {
   useEffect(() => {
     let timeout: NodeJS.Timeout;
     const handleScroll = () => {
+      if (!containerRef.current) return;
       gsap.to(containerRef.current, { opacity: 1, duration: 0.3 });
       clearTimeout(timeout);
       timeout = setTimeout(() => {
+        if (!containerRef.current) return;
         gsap.to(containerRef.current, { opacity: 0.3, duration: 0.8 });
         setDirection(null);
       }, 1500);

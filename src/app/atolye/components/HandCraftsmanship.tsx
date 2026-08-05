@@ -8,7 +8,7 @@ export function HandCraftsmanship() {
       <div className="container mx-auto">
         
         {/* Title Centered */}
-        <div className="text-center mb-4xl">
+        <div className="text-center mb-12 md:mb-16">
           <FadeIn delay={0.2}>
             <span className="text-bronze-500 font-sans text-xs tracking-[0.3em] uppercase mb-md block">
               04. Atölyenin Kalbi
@@ -33,8 +33,8 @@ export function HandCraftsmanship() {
           <FadeIn delay={0.4} duration={2} className="md:mt-24">
             <div className="w-full aspect-[3/4] bg-charcoal-950 relative overflow-hidden group">
               <SmartImage 
-                src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&q=90&w=800"
-                alt="Usta eli detay"
+                src="/images/hand_craft_sanding.png"
+                alt="Usta eli zımpara detayı"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
@@ -46,8 +46,8 @@ export function HandCraftsmanship() {
           <FadeIn delay={0.6} duration={2}>
             <div className="w-full aspect-[3/4] bg-charcoal-950 relative overflow-hidden group">
               <SmartImage 
-                src="https://images.unsplash.com/photo-1581428982868-e410dd047a90?auto=format&fit=crop&q=90&w=800"
-                alt="Zımpara ve cila"
+                src="/images/hand_craft_oiling.png"
+                alt="Iskarpela ile detay işleme"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
@@ -59,8 +59,8 @@ export function HandCraftsmanship() {
           <FadeIn delay={0.8} duration={2} className="md:mt-48">
             <div className="w-full aspect-[3/4] bg-charcoal-950 relative overflow-hidden group">
               <SmartImage 
-                src="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&q=90&w=800"
-                alt="El aletleri"
+                src="/images/hand_craft_chisel_v2.png"
+                alt="Ahşaba yağ cilası uygulama"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"

@@ -17,7 +17,35 @@ export const metadata = {
 export default function WorkshopPage() {
   return (
     <main className="min-h-screen bg-charcoal-950">
-      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "Atölye Belgeseli | Sedirkon Mobilya",
+            "description": "Ahşabın doğallığı, ustalığın sabrı ve yılların deneyimi. Sedirkon atölyesinin kapılarını aralayın.",
+            "url": "https://sedirkon.com/atolye",
+            "mainEntity": {
+              "@type": "VideoObject",
+              "name": "Sedirkon Atölye Belgeseli",
+              "description": "Sedirkon mobilyalarının üretim süreci: Ahşap seçimi, kurutma, kesim, zanaat, döşeme ve kalite kontrol aşamaları.",
+              "thumbnailUrl": "https://sedirkon.com/og-image.jpg",
+              "uploadDate": "2024-01-01T08:00:00+03:00",
+              "contentUrl": "https://sedirkon.com/atolye",
+              "embedUrl": "https://sedirkon.com/atolye",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Sedirkon Mobilya",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://sedirkon.com/logo.png"
+                }
+              }
+            }
+          })
+        }}
+      />
       <IntroVideo />
       <WoodSelection />
       <WoodDrying />

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import LoaderLogo from "@/components/loading/LoaderLogo";
 
 interface TransitionOverlayProps {
   isTransitioning: boolean;
@@ -10,7 +11,7 @@ interface TransitionOverlayProps {
 
 export function TransitionOverlay({ isTransitioning, isLongLoading }: TransitionOverlayProps) {
   const overlayRef = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLSpanElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // If user prefers reduced motion, we don't animate the overlay (or we do it instantly)
@@ -41,12 +42,8 @@ export function TransitionOverlay({ isTransitioning, isLongLoading }: Transition
   }, [isTransitioning]);
 
   useEffect(() => {
-    if (isLongLoading && textRef.current) {
-      gsap.to(textRef.current, {
-        opacity: 1,
-        duration: 0.5,
-      });
-      // Breathing effect
+    if (isTransitioning && textRef.current) {
+      // Breathing effect starts immediately
       gsap.to(textRef.current, {
         scale: 1.05,
         opacity: 0.7,
@@ -57,9 +54,9 @@ export function TransitionOverlay({ isTransitioning, isLongLoading }: Transition
       });
     } else if (textRef.current) {
       gsap.killTweensOf(textRef.current);
-      gsap.to(textRef.current, { opacity: 0, duration: 0.3 });
+      gsap.set(textRef.current, { scale: 1, opacity: 1 });
     }
-  }, [isLongLoading]);
+  }, [isTransitioning]);
 
   return (
     <div
@@ -67,12 +64,9 @@ export function TransitionOverlay({ isTransitioning, isLongLoading }: Transition
       className="fixed inset-0 z-[9999] bg-charcoal-950 flex items-center justify-center pointer-events-none"
       style={{ transform: "translateY(100%)" }}
     >
-      <span 
-        ref={textRef} 
-        className="font-serif text-4xl text-cream-500 uppercase tracking-[0.2em] opacity-0"
-      >
-        Sedirkon
-      </span>
+      <div ref={textRef}>
+        <LoaderLogo />
+      </div>
     </div>
   );
 }

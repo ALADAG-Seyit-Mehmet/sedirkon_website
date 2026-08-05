@@ -7,15 +7,14 @@ export function IntroVideo() {
       
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full z-0">
-        <div className="absolute inset-0 bg-charcoal-950/60 z-10 pointer-events-none" />
-        <video 
-          autoPlay 
-          muted 
-          loop 
+        <div className="absolute inset-0 bg-charcoal-950/50 z-10 pointer-events-none" />
+        <video
+          src="/videos/hero-bg-v4.mp4"
+          autoPlay
+          loop
+          muted
           playsInline
-          className="w-full h-full object-cover animate-breathe"
-          // We use a high quality royalty free video of a workshop/woodworking as placeholder
-          src="https://cdn.pixabay.com/video/2020/05/26/40149-425143362_large.mp4"
+          className="w-full h-full object-cover"
         />
       </div>
 

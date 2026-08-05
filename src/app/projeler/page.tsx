@@ -17,6 +17,15 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   const featuredProject = MOCK_PROJECTS.find(p => p.slug === "villa-bosphorus") || MOCK_PROJECTS[0];
 
+  if (!featuredProject) {
+    return (
+      <main className="min-h-screen bg-charcoal-950 pt-32 pb-section flex flex-col items-center justify-center px-md text-center">
+        <h1 className="font-serif text-4xl text-cream-500 mb-4">Projeler</h1>
+        <p className="text-cream-500/70 font-sans text-lg max-w-lg">Bu sayfa şu anda güncellenmektedir. Çok yakında yeni mimari projelerimizle karşınızda olacağız.</p>
+      </main>
+    );
+  }
+
   return (
     <main className="min-h-screen bg-charcoal-950">
       

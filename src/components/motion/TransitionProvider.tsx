@@ -42,21 +42,35 @@ function ScrollRestorationManager() {
   return null;
 }
 
+// Listen to URL changes including search parameters safely within a Suspense boundary
+function URLChangeListener({ onChange }: { onChange: () => void }) {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  
+  useEffect(() => {
+    onChange();
+  }, [pathname, searchParams?.toString(), onChange]);
+
+  return null;
+}
+
 export function TransitionProvider({ children }: { children: React.ReactNode }) {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isLongLoading, setIsLongLoading] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
 
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
+  const handleUrlChange = useCallback(() => {
     setIsTransitioning(false);
     setIsLongLoading(false);
-  }, [pathname]);
-
+  }, []);
 
   const navigate = useCallback((href: string) => {
-    if (href === pathname) return;
+    const currentUrl = typeof window !== "undefined" 
+      ? window.location.pathname + window.location.search + window.location.hash
+      : pathname;
+      
+    if (href === pathname || href === currentUrl) return;
     
     setIsTransitioning(true);
 
@@ -78,6 +92,7 @@ export function TransitionProvider({ children }: { children: React.ReactNode }) 
     <TransitionContext.Provider value={{ isTransitioning, navigate }}>
       <TransitionOverlay isTransitioning={isTransitioning} isLongLoading={isLongLoading} />
       <Suspense fallback={null}>
+        <URLChangeListener onChange={handleUrlChange} />
         <ScrollRestorationManager />
       </Suspense>
       {children}

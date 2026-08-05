@@ -15,7 +15,7 @@ const NAV_ITEMS = [
   { label: "Malzemeler", href: "/malzemeler" },
   { label: "Atölye", href: "/atolye" },
   { label: "Projeler", href: "/projeler" },
-  { label: "İletişim", href: "/#iletisim" },
+  { label: "İletişim", href: "/iletisim" },
 ];
 
 export default function Navbar() {
@@ -34,6 +34,7 @@ export default function Navbar() {
         start: "top -50",
         end: 99999,
         onEnter: () => {
+          if (!navRef.current) return;
           gsap.to(navRef.current, {
             backgroundColor: tokens.colors.charcoal[950] + "F2", // 95% opacity
             backdropFilter: "blur(12px)",
@@ -43,6 +44,7 @@ export default function Navbar() {
           });
         },
         onLeaveBack: () => {
+          if (!navRef.current) return;
           gsap.to(navRef.current, {
             backgroundColor: tokens.colors.charcoal[950] + "00", // 0% opacity
             backdropFilter: "blur(0px)",
@@ -71,6 +73,7 @@ export default function Navbar() {
 
       gsap.to(mobileMenuRef.current, {
         yPercent: 0,
+        autoAlpha: 1, // handles both opacity and visibility
         duration: 0.8,
         ease: "power4.inOut",
       });
@@ -90,6 +93,7 @@ export default function Navbar() {
     } else {
       gsap.to(mobileMenuRef.current, {
         yPercent: -100,
+        autoAlpha: 0, // handles both opacity and visibility
         duration: 0.8,
         ease: "power4.inOut",
         onComplete: () => {
@@ -101,6 +105,17 @@ export default function Navbar() {
         }
       });
     }
+  }, [isMobileMenuOpen]);
+
+  // Close mobile menu on desktop resize to prevent scroll lock
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024 && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [isMobileMenuOpen]);
 
   // Handle smooth scroll to section via Lenis
@@ -173,7 +188,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Toggle & Search */}
-          <div className="lg:hidden flex items-center gap-2 z-110 relative">
+          <div className="lg:hidden flex items-center gap-2 z-[120] relative">
             <button 
               onClick={openSearch}
               className="text-cream-500 p-2"
@@ -190,35 +205,40 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-      </nav>
 
-      {/* Mobile Full Screen Menu */}
-      <div
-        ref={mobileMenuRef}
-        className="fixed inset-0 z-105 bg-charcoal-950 flex flex-col justify-center items-center -translate-y-full will-change-transform"
-      >
-        <ul ref={mobileLinksRef} className="flex flex-col items-center gap-8">
-          {NAV_ITEMS.map((item) => (
-            <li key={item.label} className="overflow-hidden">
-              <TransitionLink
-                href={item.href}
-                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleScrollTo(e, item.href)}
-                className="font-serif text-4xl text-cream-500 hover:text-white transition-colors uppercase tracking-widest"
+        {/* Mobile Full Screen Menu */}
+        <div
+          ref={mobileMenuRef}
+          className="lg:hidden fixed inset-0 bg-charcoal-950 flex flex-col justify-center items-center"
+          style={{ 
+            zIndex: -1, // Places it behind the navbar contents but over the page because nav is z-100
+            transform: "translateY(-100%)", // Initial state
+            visibility: "hidden" // Hide completely when not open to prevent interaction issues
+          }}
+        >
+          <ul ref={mobileLinksRef} className="flex flex-col items-center gap-8">
+            {NAV_ITEMS.map((item) => (
+              <li key={item.label} className="overflow-hidden">
+                <TransitionLink
+                  href={item.href}
+                  onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleScrollTo(e, item.href)}
+                  className="font-serif text-4xl text-cream-500 hover:text-white transition-colors uppercase tracking-widest"
+                >
+                  {item.label}
+                </TransitionLink>
+              </li>
+            ))}
+            <li className="mt-8 overflow-hidden">
+              <Button
+                variant="outline"
+                className="border-cream-500/20 text-cream-500 hover:bg-cream-500 hover:text-charcoal-950 font-sans tracking-widest text-xs uppercase px-12 transition-colors duration-500"
               >
-                {item.label}
-              </TransitionLink>
+                Kataloğu İncele
+              </Button>
             </li>
-          ))}
-          <li className="mt-8 overflow-hidden">
-            <Button
-              variant="outline"
-              className="border-cream-500/20 text-cream-500 hover:bg-cream-500 hover:text-charcoal-950 font-sans tracking-widest text-xs uppercase px-12 transition-colors duration-500"
-            >
-              Kataloğu İncele
-            </Button>
-          </li>
-        </ul>
-      </div>
+          </ul>
+        </div>
+      </nav>
     </>
   );
 }

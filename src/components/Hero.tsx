@@ -5,6 +5,7 @@ import { RevealImage } from "@/components/motion/RevealImage";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { buttonVariants } from "@/components/ui/button";
 import { TransitionLink } from "@/components/motion/TransitionLink";
+import { SmartImage } from "@/components/ui/SmartImage";
 import { cn } from "@/lib/utils";
 
 export default function Hero() {
@@ -19,17 +20,14 @@ export default function Hero() {
           className="absolute inset-0 w-full h-full"
           aspectRatio="aspect-auto"
         >
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
+          <SmartImage
+            src="/anasayfa_arkaplan.jpg"
+            alt="Sedirkon Ana Sayfa Arka Plan"
+            priority
+            quality={100}
+            sizes="100vw"
             className="object-cover w-full h-full will-change-transform"
-            poster="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2532&auto=format&fit=crop"
-          >
-            {/* Generic placeholder woodworking video from coverr/pexels (can be replaced by real project asset) */}
-            <source src="https://cdn.coverr.co/videos/coverr-woodworking-in-a-workshop-5244/1080p.mp4" type="video/mp4" />
-          </video>
+          />
         </RevealImage>
         {/* Dark cinematic overlay */}
         <div className="absolute inset-0 bg-charcoal-950/50 z-10" />
@@ -79,7 +77,7 @@ export default function Hero() {
               href="/atolye"
               className={cn(
                 buttonVariants({ variant: "outline" }),
-                "border-transparent text-cream-500 hover:text-white hover:bg-white/5 font-sans tracking-widest text-xs uppercase px-10 py-6 transition-all duration-500"
+                "border-cream-500/30 text-cream-500 hover:bg-cream-500 hover:text-charcoal-950 font-sans tracking-widest text-xs uppercase px-10 py-6 transition-all duration-500"
               )}
             >
               Atölyemizi İncele
@@ -87,11 +85,13 @@ export default function Hero() {
           </FadeIn>
         </div>
 
+      </div>
+
+      {/* Scroll indicator positioned at the bottom of the screen */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 overflow-hidden mx-auto hidden md:block">
         <FadeIn delay={2.8} duration={1} scrollTrigger={false}>
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 overflow-hidden mx-auto hidden md:block">
-            <div className="w-px h-xl bg-cream-500/20 mx-auto relative overflow-hidden">
-               <div className="absolute top-0 left-0 w-full h-full bg-cream-500 origin-top animate-scroll-indicator" />
-            </div>
+          <div className="w-px h-xl bg-cream-500/20 mx-auto relative overflow-hidden">
+             <div className="absolute top-0 left-0 w-full h-full bg-cream-500 origin-top animate-scroll-indicator" />
           </div>
         </FadeIn>
       </div>

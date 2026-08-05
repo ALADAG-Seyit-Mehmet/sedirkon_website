@@ -45,37 +45,33 @@ export function CommandPalette() {
   if (!isMounted && !isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[99999] flex items-start justify-center pt-[10vh] sm:pt-[15vh] px-4 pointer-events-auto">
-      {/* Overlay Backdrop */}
+    <div className="fixed inset-0 z-[99999] flex flex-col pointer-events-auto">
+      {/* Full screen backdrop blur */}
       <div 
         ref={overlayRef}
-        className="absolute inset-0 bg-charcoal-950/80 backdrop-blur-md opacity-0"
+        className="absolute inset-0 bg-charcoal-950/90 backdrop-blur-2xl opacity-0"
         onClick={closeSearch}
       />
 
-      {/* Palette Container */}
+      {/* Content Container */}
       <div 
         ref={paletteRef}
-        className="relative w-full max-w-2xl bg-charcoal-900 border border-cream-500/10 rounded-xl shadow-2xl overflow-hidden flex flex-col max-h-[70vh] opacity-0"
+        className="relative w-full max-w-5xl mx-auto h-full flex flex-col px-4 pt-8 md:pt-16 opacity-0"
         onClick={(e) => e.stopPropagation()}
       >
+        <div className="flex justify-end mb-4">
+            <button 
+              onClick={closeSearch} 
+              className="text-cream-500/50 hover:text-cream-500 transition-colors uppercase tracking-widest text-xs md:text-sm font-sans flex items-center gap-2 group"
+            >
+              Kapat 
+              <kbd className="px-2 py-1 rounded bg-cream-500/10 border border-cream-500/20 group-hover:bg-cream-500/20 transition-colors">ESC</kbd>
+            </button>
+        </div>
+        
         <SearchInput />
         <SearchResults />
         
-        {/* Footer */}
-        <div className="py-3 px-4 border-t border-cream-500/10 flex items-center justify-between text-[10px] text-cream-500/40 uppercase tracking-widest font-sans">
-          <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1">
-              <kbd className="px-1.5 py-0.5 rounded-sm bg-charcoal-800 border border-cream-500/20">↑↓</kbd> Gezin
-            </span>
-            <span className="flex items-center gap-1">
-              <kbd className="px-1.5 py-0.5 rounded-sm bg-charcoal-800 border border-cream-500/20">↵</kbd> Seç
-            </span>
-          </div>
-          <div className="flex items-center gap-1">
-            <kbd className="px-1.5 py-0.5 rounded-sm bg-charcoal-800 border border-cream-500/20">ESC</kbd> Kapat
-          </div>
-        </div>
       </div>
     </div>
   );

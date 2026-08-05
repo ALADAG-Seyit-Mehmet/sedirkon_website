@@ -20,11 +20,11 @@ export function FinalShowcase() {
         <RevealText 
           text="Bir Hikâye Satın Alın" 
           as="h2" 
-          className="text-5xl md:text-8xl font-serif text-cream-500 tracking-tighter leading-none mb-xl"
+          className="text-5xl md:text-8xl font-serif text-cream-500 tracking-tighter leading-none mb-6 md:mb-8"
         />
         
         <FadeIn delay={0.6} duration={2}>
-          <p className="text-cream-500/70 font-sans text-xl md:text-2xl font-light tracking-wide max-w-2xl mx-auto mb-2xl">
+          <p className="text-cream-500/70 font-sans text-xl md:text-2xl font-light tracking-wide max-w-2xl mx-auto mb-8 md:mb-10">
             Sadece bir mobilya değil, yılların emeğini ve usta ellerin sıcaklığını evinize taşıyın.
           </p>
         </FadeIn>

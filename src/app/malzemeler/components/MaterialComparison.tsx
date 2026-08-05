@@ -2,10 +2,10 @@ import { RevealText } from "@/components/motion/RevealText";
 import { FadeIn } from "@/components/motion/FadeIn";
 
 const MATERIALS = [
-  { name: "Amerikan Cevizi", breathability: 40, durability: 90, warmth: 100 },
-  { name: "Beyaz Meşe", breathability: 35, durability: 95, warmth: 80 },
-  { name: "Doğal Keten", breathability: 100, durability: 70, warmth: 60 },
-  { name: "Anilin Deri", breathability: 60, durability: 85, warmth: 75 },
+  { name: "Masif Gürgen", breathability: 40, durability: 95, warmth: 90 },
+  { name: "Premium Keten", breathability: 100, durability: 80, warmth: 70 },
+  { name: "İpek Kadife", breathability: 70, durability: 75, warmth: 95 },
+  { name: "Titanyum Gold", breathability: 10, durability: 100, warmth: 30 },
 ];
 
 export function MaterialComparison() {
