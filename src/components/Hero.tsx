@@ -26,17 +26,19 @@ export default function Hero() {
             alt="Sedirkon Ana Sayfa Arka Plan"
             priority
             quality={100}
-            sizes="100vw"
-            className="hidden md:block object-cover object-center w-full h-full will-change-transform"
+            sizes="(max-width: 768px) 0vw, 100vw"
+            containerClassName="hidden md:block absolute inset-0"
+            className="object-cover object-center w-full h-full will-change-transform"
           />
           {/* Mobile Background */}
           <SmartImage
-            src="/anasayfa_arkaplan_mobil.png"
+            src="/anasayfa_arkaplan_mobil_v2.png"
             alt="Sedirkon Ana Sayfa Arka Plan Mobil"
             priority
             quality={100}
-            sizes="100vw"
-            className="block md:hidden object-cover object-center w-full h-full will-change-transform"
+            sizes="(max-width: 768px) 100vw, 0vw"
+            containerClassName="block md:hidden absolute inset-0"
+            className="object-cover object-center w-full h-full will-change-transform"
           />
         </RevealImage>
         {/* Dark cinematic overlay */}
