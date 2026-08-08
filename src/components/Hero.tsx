@@ -20,13 +20,23 @@ export default function Hero() {
           className="absolute inset-0 w-full h-full"
           aspectRatio="aspect-auto"
         >
+          {/* Desktop Background */}
           <SmartImage
             src="/anasayfa_arkaplan.jpg"
             alt="Sedirkon Ana Sayfa Arka Plan"
             priority
             quality={100}
             sizes="100vw"
-            className="object-cover object-center w-full h-full will-change-transform"
+            className="hidden md:block object-cover object-center w-full h-full will-change-transform"
+          />
+          {/* Mobile Background */}
+          <SmartImage
+            src="/anasayfa_arkaplan_mobil.png"
+            alt="Sedirkon Ana Sayfa Arka Plan Mobil"
+            priority
+            quality={100}
+            sizes="100vw"
+            className="block md:hidden object-cover object-center w-full h-full will-change-transform"
           />
         </RevealImage>
         {/* Dark cinematic overlay */}
