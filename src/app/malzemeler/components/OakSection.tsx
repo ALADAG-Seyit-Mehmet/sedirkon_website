@@ -25,7 +25,7 @@ export function OakSection() {
         </div>
 
         {/* Right: Text */}
-        <div className="md:col-span-5 flex flex-col justify-center">
+        <div className="md:col-span-5 flex flex-col justify-center text-center md:text-left">
           <FadeIn delay={0.2}>
             <span className="text-bronze-500 font-sans text-xs tracking-[0.3em] uppercase mb-md block">
               Materyal #02
@@ -34,7 +34,7 @@ export function OakSection() {
           <RevealText 
             text="Beyaz Meşe" 
             as="h2" 
-            className="text-4xl md:text-6xl font-serif text-cream-500 tracking-tight leading-none mb-xl"
+            className="text-4xl md:text-6xl font-serif text-cream-500 tracking-tight leading-none mb-xl justify-center md:justify-start"
           />
           
           <div className="flex flex-col gap-lg">

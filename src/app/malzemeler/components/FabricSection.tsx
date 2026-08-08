@@ -58,15 +58,15 @@ export function FabricSection() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-md lg:gap-lg items-center max-w-6xl mx-auto">
         
         {/* Left: Interactive/Animated Text */}
-        <div className="lg:col-span-7 flex flex-col gap-xl">
+        <div className="lg:col-span-7 flex flex-col gap-xl text-center lg:text-left">
           {FABRIC_SLIDES.map((slide, idx) => (
             <div 
               key={idx} 
               className={cn(
-                "transition-all duration-700 border-l-2 pl-6 py-2 cursor-pointer",
+                "transition-all duration-700 md:border-l-2 md:pl-6 py-2 cursor-pointer",
                 activeIndex === idx 
-                  ? "border-bronze-500 opacity-100" 
-                  : "border-cream-500/10 opacity-30 hover:opacity-60"
+                  ? "md:border-bronze-500 opacity-100" 
+                  : "md:border-cream-500/10 opacity-30 hover:opacity-60"
               )}
               onClick={() => setActiveIndex(idx)}
             >

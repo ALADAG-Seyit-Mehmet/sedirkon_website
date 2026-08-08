@@ -10,7 +10,7 @@ export function HornbeamSection() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-md md:gap-lg items-center">
         
         {/* Left: Text */}
-        <div className="md:col-span-7 flex flex-col justify-center order-2 md:order-1">
+        <div className="md:col-span-7 flex flex-col justify-center order-2 md:order-1 text-center md:text-left">
           <FadeIn delay={0.2}>
             <span className="text-bronze-500 font-sans text-xs tracking-[0.3em] uppercase mb-md block">
               Materyal #01
@@ -19,7 +19,7 @@ export function HornbeamSection() {
           <RevealText 
             text="Masif Gürgen" 
             as="h2" 
-            className="text-4xl md:text-6xl font-serif text-cream-500 tracking-tight leading-none mb-xl justify-start"
+            className="text-4xl md:text-6xl font-serif text-cream-500 tracking-tight leading-none mb-xl justify-center md:justify-start"
           />
           
           <div className="flex flex-col gap-lg pr-0 lg:pr-12">
