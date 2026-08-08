@@ -26,7 +26,7 @@ export default function Hero() {
             priority
             quality={100}
             sizes="100vw"
-            className="object-contain md:object-cover md:object-center w-full h-full will-change-transform"
+            className="object-cover object-center w-full h-full will-change-transform"
           />
         </RevealImage>
         {/* Dark cinematic overlay */}
