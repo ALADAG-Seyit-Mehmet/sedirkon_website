@@ -54,7 +54,7 @@ export function ProjectHero() {
         <FadeIn delay={2.5} duration={2}>
           <div className="flex flex-col items-center gap-sm">
             <span className="text-cream-500/30 font-sans text-xs tracking-widest uppercase [writing-mode:vertical-lr] rotate-180">Keşfet</span>
-            <div className="w-[1px] h-16 bg-cream-500/10 overflow-hidden relative">
+            <div className="w-px h-16 bg-cream-500/10 overflow-hidden relative">
               <div className="w-full h-full bg-cream-500 absolute top-0 left-0 origin-top animate-scroll-line" />
             </div>
           </div>

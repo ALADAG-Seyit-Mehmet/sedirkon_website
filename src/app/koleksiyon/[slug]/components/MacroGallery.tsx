@@ -11,7 +11,7 @@ export function MacroGallery({ product }: MacroGalleryProps) {
   if (!product.macroImages || product.macroImages.length === 0) return null;
 
   return (
-    <section className="w-full py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950">
+    <section className="w-full py-section container mx-auto px-4 md:px-8 lg:px-xl bg-charcoal-950">
       
       {/* Title */}
       <div className="mb-2xl md:mb-4xl">
@@ -36,13 +36,13 @@ export function MacroGallery({ product }: MacroGalleryProps) {
           
           if (idx === 0) {
             colSpan = "md:col-span-8";
-            aspectRatio = "aspect-[4/3]";
+            aspectRatio = "aspect-4/3";
           } else if (idx === 1) {
             colSpan = "md:col-span-4";
-            aspectRatio = "aspect-[3/4]";
+            aspectRatio = "aspect-3/4";
           } else if (idx === 2) {
             colSpan = "md:col-span-12";
-            aspectRatio = "aspect-[21/9]"; // Ultra wide cinematic
+            aspectRatio = "aspect-21/9"; // Ultra wide cinematic
           }
 
           return (

@@ -35,7 +35,7 @@ export function FabricSection() {
   }, []);
 
   return (
-    <section className="w-full py-16 md:py-24 lg:py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950 border-t border-cream-500/10">
+    <section className="w-full py-16 md:py-24 lg:py-section container mx-auto px-4 md:px-8 lg:px-xl bg-charcoal-950 border-t border-cream-500/10">
       
       <div className="text-center mb-4xl">
         <FadeIn delay={0.2}>
@@ -85,7 +85,7 @@ export function FabricSection() {
 
         {/* Right: Crossfade Gallery */}
         <div className="lg:col-span-5 flex items-center justify-center">
-          <FadeIn delay={0.4} duration={2} className="w-full max-w-[420px]">
+          <FadeIn delay={0.4} duration={2} className="w-full max-w-105">
             <div className="w-full aspect-square bg-charcoal-900 relative overflow-hidden rounded-2xl border border-cream-500/10 shadow-2xl">
               {FABRIC_SLIDES.map((slide, idx) => (
                 <div

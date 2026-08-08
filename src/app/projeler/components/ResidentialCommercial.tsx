@@ -81,7 +81,7 @@ export function ResidentialCommercial({ projects }: ResidentialCommercialProps) 
 
             <div className="md:col-span-7 order-1 md:order-2">
               <MaskReveal direction="right-to-left" duration={1.8}>
-                <div className="w-full aspect-[4/3] bg-charcoal-900 relative">
+                <div className="w-full aspect-4/3 bg-charcoal-900 relative">
                   <SmartImage 
                     src={commercial.images[0]} 
                     alt={commercial.title}

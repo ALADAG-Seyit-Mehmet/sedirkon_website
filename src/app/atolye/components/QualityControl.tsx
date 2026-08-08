@@ -31,7 +31,7 @@ export function QualityControl() {
 
         {/* Cinematic Wide Image */}
         <FadeIn delay={1.0} duration={2}>
-          <div className="w-full aspect-[21/9] bg-charcoal-950 relative overflow-hidden group">
+          <div className="w-full aspect-21/9 bg-charcoal-950 relative overflow-hidden group">
             <SmartImage 
               src="/images/quality_control_gloves.png"
               alt="Kalite Kontrol Süreci"

@@ -61,7 +61,7 @@ export function TransitionOverlay({ isTransitioning, isLongLoading }: Transition
   return (
     <div
       ref={overlayRef}
-      className="fixed inset-0 z-[9999] bg-charcoal-950 flex items-center justify-center pointer-events-none"
+      className="fixed inset-0 z-9999 bg-charcoal-950 flex items-center justify-center pointer-events-none"
       style={{ transform: "translateY(100%)" }}
     >
       <div ref={textRef}>

@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 export default function Hero() {
   return (
-    <section className="relative h-[100dvh] w-full flex flex-col justify-center items-center overflow-hidden bg-charcoal-950">
+    <section className="relative h-dvh w-full flex flex-col justify-center items-center overflow-hidden bg-charcoal-950">
       
       {/* Background Video Setup */}
       <div className="absolute inset-0 z-0">

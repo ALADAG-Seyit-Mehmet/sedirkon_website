@@ -18,7 +18,7 @@ export function RelatedCollection({ product }: RelatedCollectionProps) {
   if (related.length === 0) return null;
 
   return (
-    <section className="w-full py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950 overflow-hidden">
+    <section className="w-full py-section container mx-auto px-4 md:px-8 lg:px-xl bg-charcoal-950 overflow-hidden">
       
       <div className="mb-2xl md:mb-4xl flex flex-col items-center text-center">
         <RevealText 
@@ -42,7 +42,7 @@ export function RelatedCollection({ product }: RelatedCollectionProps) {
             className="w-full md:w-1/2 max-w-2xl"
           >
             <Link href={`/koleksiyon/${item.slug}`} isFlip={true} className="group block w-full h-full">
-              <div className="w-full aspect-[4/3] bg-charcoal-900 relative overflow-hidden">
+              <div className="w-full aspect-4/3 bg-charcoal-900 relative overflow-hidden">
                 <SmartImage
                   src={item.images[0]}
                   alt={item.title}

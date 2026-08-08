@@ -12,7 +12,7 @@ export function CraftsmanshipSection({ product }: CraftsmanshipSectionProps) {
   if (!product.craftsmanshipImages || product.craftsmanshipImages.length === 0) return null;
 
   return (
-    <section className="w-full py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950">
+    <section className="w-full py-section container mx-auto px-4 md:px-8 lg:px-xl bg-charcoal-950">
       
       {/* Title */}
       <div className="mb-2xl md:mb-4xl text-center">
@@ -22,7 +22,7 @@ export function CraftsmanshipSection({ product }: CraftsmanshipSectionProps) {
           className="text-2xl md:text-4xl font-serif text-cream-500 tracking-widest uppercase"
         />
         <FadeIn delay={0.4}>
-          <div className="w-12 h-[1px] bg-bronze-500 mt-md mx-auto" />
+          <div className="w-12 h-px bg-bronze-500 mt-md mx-auto" />
         </FadeIn>
       </div>
 
@@ -39,7 +39,7 @@ export function CraftsmanshipSection({ product }: CraftsmanshipSectionProps) {
               {/* Image side */}
               <div className="w-full md:w-2/3">
                 <MaskReveal duration={1.5} delay={0.2}>
-                  <div className="w-full aspect-[4/3] bg-charcoal-900 relative">
+                  <div className="w-full aspect-4/3 bg-charcoal-900 relative">
                     <SmartImage
                       src={img}
                       alt={`${product.title} İşçilik ${idx + 1}`}

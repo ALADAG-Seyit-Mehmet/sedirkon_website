@@ -3,7 +3,7 @@ import { FadeIn } from "@/components/motion/FadeIn";
 
 export function ContactHero() {
   return (
-    <section className="w-full py-12 md:py-20 lg:py-3xl px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 text-center flex flex-col items-center">
+    <section className="w-full py-12 md:py-20 lg:py-3xl container mx-auto px-4 md:px-8 lg:px-xl text-center flex flex-col items-center">
       <FadeIn delay={0.2}>
         <span className="text-bronze-500 font-sans text-xs tracking-[0.3em] uppercase mb-md block">
           BİZE ULAŞIN

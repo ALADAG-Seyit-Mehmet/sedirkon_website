@@ -35,7 +35,7 @@ export function RecentlyViewed({ currentProductId }: RecentlyViewedProps) {
   if (recentProducts.length === 0) return null;
 
   return (
-    <section className="w-full py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950 border-t border-cream-500/10">
+    <section className="w-full py-section container mx-auto px-4 md:px-8 lg:px-xl bg-charcoal-950 border-t border-cream-500/10">
       <div className="mb-2xl md:mb-4xl flex flex-col items-center text-center">
         <RevealText 
           text="Son İnceledikleriniz" 
@@ -43,7 +43,7 @@ export function RecentlyViewed({ currentProductId }: RecentlyViewedProps) {
           className="text-2xl md:text-3xl font-serif text-cream-500 tracking-widest uppercase" 
         />
         <FadeIn delay={0.4}>
-          <div className="w-12 h-[1px] bg-bronze-500 mt-md mx-auto" />
+          <div className="w-12 h-px bg-bronze-500 mt-md mx-auto" />
         </FadeIn>
       </div>
 
@@ -51,7 +51,7 @@ export function RecentlyViewed({ currentProductId }: RecentlyViewedProps) {
         {recentProducts.map((product, idx) => (
           <FadeIn key={product.id} delay={0.2 + (idx * 0.1)} duration={1.5}>
             <Link href={`/koleksiyon/${product.slug}`} className="group block">
-              <div className="w-full aspect-[4/3] bg-charcoal-900 relative overflow-hidden">
+              <div className="w-full aspect-4/3 bg-charcoal-900 relative overflow-hidden">
                 <SmartImage 
                   src={product.images[0]} 
                   alt={product.title} 

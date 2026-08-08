@@ -170,7 +170,7 @@ function ResultItem({
       }`}
     >
       {item.image && (
-        <div className="w-full aspect-[4/3] bg-charcoal-950 relative overflow-hidden border-b border-cream-500/10">
+        <div className="w-full aspect-4/3 bg-charcoal-950 relative overflow-hidden border-b border-cream-500/10">
           <SmartImage 
             src={item.image} 
             alt={item.title} 

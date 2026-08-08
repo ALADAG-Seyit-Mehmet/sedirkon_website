@@ -51,3 +51,9 @@ scrape_images.js
 # Large Media
 *.pdf
 !public/sedirkon-2026-katalog_compressed.pdf
+
+# IDE and local settings
+.vscode/
+
+# Archives
+*.zip

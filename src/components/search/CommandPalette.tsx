@@ -45,7 +45,7 @@ export function CommandPalette() {
   if (!isMounted && !isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[99999] flex flex-col pointer-events-auto">
+    <div className="fixed inset-0 z-99999 flex flex-col pointer-events-auto">
       {/* Full screen backdrop blur */}
       <div 
         ref={overlayRef}

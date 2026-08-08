@@ -72,7 +72,7 @@ export function ScrollIndicator() {
   return (
     <div 
       ref={containerRef} 
-      className="fixed right-0 top-0 h-full w-12 pointer-events-none z-[120] hidden md:flex flex-col items-center py-8 opacity-30 transition-opacity"
+      className="fixed right-0 top-0 h-full w-12 pointer-events-none z-120 hidden md:flex flex-col items-center py-8 opacity-30 transition-opacity"
     >
       {/* Progress Text */}
       <div className="text-[10px] font-sans tracking-widest text-cream-500/80 mb-4 h-4 overflow-hidden">
@@ -82,7 +82,7 @@ export function ScrollIndicator() {
       </div>
 
       {/* Line Indicator */}
-      <div className="w-[1px] flex-1 bg-cream-500/10 relative overflow-hidden">
+      <div className="w-px flex-1 bg-cream-500/10 relative overflow-hidden">
         <div
           ref={progressRef}
           className="absolute top-0 left-0 w-full h-full bg-cream-500 origin-top will-change-transform"

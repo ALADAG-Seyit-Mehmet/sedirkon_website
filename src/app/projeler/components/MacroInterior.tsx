@@ -56,7 +56,7 @@ export function MacroInterior({ project }: MacroInteriorProps) {
           {project.macroImages.map((img, idx) => (
             <FadeIn key={idx} delay={0.2 * idx} className={idx === 1 ? "md:mt-4xl" : ""}>
               <div 
-                className="w-full aspect-[3/4] md:aspect-square bg-charcoal-900 relative overflow-hidden group"
+                className="w-full aspect-3/4 md:aspect-square bg-charcoal-900 relative overflow-hidden group"
                 onMouseEnter={() => setCursorType("zoom")}
                 onMouseLeave={() => setCursorType("default")}
                 onClick={(e) => openMedia(galleryItems, idx, `project-${project.id}-macro`, e.currentTarget)}

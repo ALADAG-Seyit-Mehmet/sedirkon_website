@@ -24,7 +24,7 @@ export function Upholstery() {
   }, []);
 
   return (
-    <section className="w-full py-16 md:py-24 lg:py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950">
+    <section className="w-full py-16 md:py-24 lg:py-section container mx-auto px-4 md:px-8 lg:px-xl bg-charcoal-950">
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-2xl lg:gap-4xl items-center">
         
@@ -55,7 +55,7 @@ export function Upholstery() {
         {/* Right: Crossfade Image Gallery */}
         <div className="order-1 lg:order-2">
           <FadeIn delay={0.4} duration={2}>
-            <div className="w-full aspect-square md:aspect-[4/3] bg-charcoal-900 relative overflow-hidden">
+            <div className="w-full aspect-square md:aspect-4/3 bg-charcoal-900 relative overflow-hidden">
               {UPHOLSTERY_IMAGES.map((img, idx) => (
                 <div
                   key={img}

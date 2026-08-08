@@ -17,7 +17,7 @@ export function MaterialPhilosophy({ product }: MaterialPhilosophyProps) {
   if (!product.materials || product.materials.length === 0) return null;
 
   return (
-    <section className="w-full py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950">
+    <section className="w-full py-section container mx-auto px-4 md:px-8 lg:px-xl bg-charcoal-950">
       
       {/* Title */}
       <div className="mb-2xl md:mb-4xl text-center">
@@ -27,7 +27,7 @@ export function MaterialPhilosophy({ product }: MaterialPhilosophyProps) {
           className="text-2xl md:text-4xl font-serif text-cream-500 tracking-widest uppercase"
         />
         <FadeIn delay={0.4}>
-          <div className="w-12 h-[1px] bg-bronze-500 mt-md mx-auto" />
+          <div className="w-12 h-px bg-bronze-500 mt-md mx-auto" />
         </FadeIn>
       </div>
 
@@ -36,7 +36,7 @@ export function MaterialPhilosophy({ product }: MaterialPhilosophyProps) {
         {/* Left: Premium Crossfade Image Area */}
         <div className="w-full lg:w-2/3">
           <FadeIn delay={0.6} duration={1.5}>
-            <div className="w-full aspect-square md:aspect-[4/3] bg-charcoal-900 relative overflow-hidden">
+            <div className="w-full aspect-square md:aspect-4/3 bg-charcoal-900 relative overflow-hidden">
               {product.images.map((img, idx) => (
                 <div
                   key={img}
@@ -82,7 +82,7 @@ export function MaterialPhilosophy({ product }: MaterialPhilosophyProps) {
                     {/* Material Color Circle */}
                     <div 
                       className={cn(
-                        "w-12 h-12 rounded-full border transition-all duration-500 flex-shrink-0",
+                        "w-12 h-12 rounded-full border transition-all duration-500 shrink-0",
                         isActive ? "border-bronze-500 scale-110" : "border-cream-500/20 group-hover:border-cream-500/50"
                       )}
                       style={{ backgroundColor: mat.colorCode }}

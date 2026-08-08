@@ -7,7 +7,7 @@ const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponen
 
 export function ContactInfo() {
   return (
-    <section className="w-full px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 mt-lg md:mt-2xl max-w-6xl">
+    <section className="w-full container mx-auto px-4 md:px-8 lg:px-xl mt-lg md:mt-2xl max-w-6xl">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-md lg:gap-lg">
         
         {/* Left Side: WhatsApp Primary CTA */}
@@ -20,7 +20,7 @@ export function ContactInfo() {
               className="flex flex-col justify-center h-full group relative bg-charcoal-900 border border-cream-500/10 rounded-3xl overflow-hidden p-lg md:p-xl transition-colors duration-500 hover:border-[#25D366]/30"
             >
               {/* Subtle hover background effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#25D366]/0 to-[#25D366]/0 group-hover:from-[#25D366]/10 group-hover:to-transparent transition-colors duration-700 pointer-events-none" />
+              <div className="absolute inset-0 bg-linear-to-br from-[#25D366]/0 to-[#25D366]/0 group-hover:from-[#25D366]/10 group-hover:to-transparent transition-colors duration-700 pointer-events-none" />
               
               <div className="relative z-10 flex flex-col justify-between gap-xl">
                 <div>

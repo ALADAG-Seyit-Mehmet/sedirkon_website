@@ -54,7 +54,7 @@ export function DimensionsSection({ product }: DimensionsSectionProps) {
   if (itemsToRender.length === 0 || !itemsToRender[0].val) return null;
 
   return (
-    <section className="w-full py-2xl px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950 flex flex-col items-center border-t border-cream-500/10">
+    <section className="w-full py-2xl container mx-auto px-4 md:px-8 lg:px-xl bg-charcoal-950 flex flex-col items-center border-t border-cream-500/10">
       
       <div className="text-center mb-xl md:mb-2xl">
         <RevealText 
@@ -85,7 +85,7 @@ export function DimensionsSection({ product }: DimensionsSectionProps) {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {/* Width */}
                   <div className="group relative bg-charcoal-900 border border-cream-500/10 p-10 flex flex-col items-center justify-center overflow-hidden hover:border-bronze-500/50 transition-colors duration-500">
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20" />
+                    <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/20" />
                     <MoveHorizontal className="w-8 h-8 text-bronze-500/70 mb-4 group-hover:scale-110 transition-transform duration-500" strokeWidth={1} />
                     <h4 className="text-cream-500/50 font-sans text-xs tracking-[0.2em] uppercase mb-2">Genişlik</h4>
                     <div className="text-2xl md:text-3xl font-sans font-light text-cream-100">{w} <span className="text-lg text-cream-500/40">cm</span></div>
@@ -93,7 +93,7 @@ export function DimensionsSection({ product }: DimensionsSectionProps) {
 
                   {/* Depth */}
                   <div className="group relative bg-charcoal-900 border border-cream-500/10 p-10 flex flex-col items-center justify-center overflow-hidden hover:border-bronze-500/50 transition-colors duration-500 shadow-[0_0_40px_rgba(0,0,0,0.5)]">
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20" />
+                    <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/20" />
                     <Maximize className="w-8 h-8 text-bronze-500/70 mb-4 group-hover:scale-110 transition-transform duration-500" strokeWidth={1} />
                     <h4 className="text-cream-500/50 font-sans text-xs tracking-[0.2em] uppercase mb-2">Derinlik</h4>
                     <div className="text-2xl md:text-3xl font-sans font-light text-cream-100">{d} <span className="text-lg text-cream-500/40">cm</span></div>
@@ -101,7 +101,7 @@ export function DimensionsSection({ product }: DimensionsSectionProps) {
 
                   {/* Height */}
                   <div className="group relative bg-charcoal-900 border border-cream-500/10 p-10 flex flex-col items-center justify-center overflow-hidden hover:border-bronze-500/50 transition-colors duration-500">
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20" />
+                    <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/20" />
                     <MoveVertical className="w-8 h-8 text-bronze-500/70 mb-4 group-hover:scale-110 transition-transform duration-500" strokeWidth={1} />
                     <h4 className="text-cream-500/50 font-sans text-xs tracking-[0.2em] uppercase mb-2">Yükseklik</h4>
                     <div className="text-2xl md:text-3xl font-sans font-light text-cream-100">{h} <span className="text-lg text-cream-500/40">cm</span></div>

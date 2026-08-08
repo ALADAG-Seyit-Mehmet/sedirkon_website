@@ -55,7 +55,7 @@ export default function ScrollProgress() {
   }, { scope: containerRef });
 
   return (
-    <div ref={containerRef} className="fixed inset-0 pointer-events-none z-[120]">
+    <div ref={containerRef} className="fixed inset-0 pointer-events-none z-120">
       {/* Desktop Indicator - Right side, vertical thin line */}
       <div className="hidden md:block absolute right-0 top-0 w-[2px] h-full bg-transparent">
         <div
@@ -65,7 +65,7 @@ export default function ScrollProgress() {
       </div>
 
       {/* Mobile Indicator - Top, horizontal thin line */}
-      <div className="md:hidden absolute top-0 left-0 w-full h-[2px] bg-transparent">
+      <div className="md:hidden absolute top-0 left-0 w-full h-0.5 bg-transparent">
         <div
           ref={mobileRef}
           className="w-full h-full bg-bronze-500 origin-left will-change-transform"

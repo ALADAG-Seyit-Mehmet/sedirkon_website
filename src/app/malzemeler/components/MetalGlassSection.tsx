@@ -4,7 +4,7 @@ import { SmartImage } from "@/components/ui/SmartImage";
 
 export function MetalGlassSection() {
   return (
-    <section className="w-full py-16 md:py-24 lg:py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950">
+    <section className="w-full py-16 md:py-24 lg:py-section container mx-auto px-4 md:px-8 lg:px-xl bg-charcoal-950">
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
         

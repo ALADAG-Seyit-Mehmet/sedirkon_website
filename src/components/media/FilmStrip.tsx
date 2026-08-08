@@ -45,7 +45,7 @@ export function FilmStrip({ items, currentIndex }: FilmStripProps) {
             <button
               key={item.id}
               onClick={() => setIndex(idx)}
-              className={`relative flex-shrink-0 transition-all duration-500 ease-out overflow-hidden bg-charcoal-900 ${
+              className={`relative shrink-0 transition-all duration-500 ease-out overflow-hidden bg-charcoal-900 ${
                 isActive ? "w-24 h-16 opacity-100 ring-1 ring-cream-500" : "w-16 h-12 opacity-40 hover:opacity-80"
               }`}
             >

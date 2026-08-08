@@ -104,7 +104,7 @@ export default function Loader() {
         <LoaderLogo />
       </div>
       
-      <div className="absolute bottom-2xl md:bottom-4xl w-[1px] h-xl overflow-hidden">
+      <div className="absolute bottom-2xl md:bottom-4xl w-px h-xl overflow-hidden">
         <div 
           ref={loadingIndicatorRef} 
           className="w-full h-full bg-cream-500/50 origin-bottom will-change-transform animate-scroll-indicator" 

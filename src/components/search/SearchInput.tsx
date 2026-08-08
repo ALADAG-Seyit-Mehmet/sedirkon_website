@@ -20,7 +20,7 @@ export function SearchInput() {
   return (
     <div className="flex flex-col border-b border-cream-500/20 pb-4 mb-8">
       <div className="flex items-center">
-        <Search size={40} className="text-cream-500/50 mr-6 flex-shrink-0" />
+        <Search size={40} className="text-cream-500/50 mr-6 shrink-0" />
         <input
           ref={inputRef}
           type="text"
@@ -32,7 +32,7 @@ export function SearchInput() {
           spellCheck="false"
         />
         {isLoading && (
-          <div className="w-8 h-8 border-2 border-cream-500/20 border-t-cream-500 rounded-full animate-spin flex-shrink-0 ml-4" />
+          <div className="w-8 h-8 border-2 border-cream-500/20 border-t-cream-500 rounded-full animate-spin shrink-0 ml-4" />
         )}
       </div>
     </div>

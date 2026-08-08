@@ -10,7 +10,7 @@ export function Specifications({ product }: SpecificationsProps) {
   if (!product.specifications || product.specifications.length === 0) return null;
 
   return (
-    <section className="w-full py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950">
+    <section className="w-full py-section container mx-auto px-4 md:px-8 lg:px-xl bg-charcoal-950">
       
       <div className="mb-2xl md:mb-4xl text-center md:text-left">
         <RevealText 
@@ -19,7 +19,7 @@ export function Specifications({ product }: SpecificationsProps) {
           className="text-2xl md:text-3xl font-serif text-cream-500 tracking-wide"
         />
         <FadeIn delay={0.4}>
-          <div className="w-12 h-[1px] bg-bronze-500 mt-md mx-auto md:mx-0" />
+          <div className="w-12 h-px bg-bronze-500 mt-md mx-auto md:mx-0" />
         </FadeIn>
       </div>
 

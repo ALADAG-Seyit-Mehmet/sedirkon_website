@@ -9,7 +9,7 @@ export function ClientTestimonial({ testimonial }: ClientTestimonialProps) {
 
   return (
     <section className="w-full py-16 md:py-32 lg:py-section px-4 md:px-8 lg:px-xl bg-charcoal-900 flex items-center justify-center">
-      <div className="container mx-auto px-4 lg:px-0 max-w-4xl text-center relative">
+      <div className="container mx-auto max-w-4xl text-center relative">
         
         {/* Large Decorative Quotes */}
         <span className="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 text-9xl font-serif text-cream-500/5 select-none leading-none">
@@ -24,7 +24,7 @@ export function ClientTestimonial({ testimonial }: ClientTestimonialProps) {
 
         <FadeIn delay={0.9} duration={1.5}>
           <div className="mt-xl flex flex-col items-center justify-center gap-md">
-            <div className="w-12 h-[1px] bg-bronze-500" />
+            <div className="w-12 h-px bg-bronze-500" />
             <span className="font-sans text-xs tracking-[0.3em] text-cream-500/50 uppercase">
               Proje Sahibi
             </span>

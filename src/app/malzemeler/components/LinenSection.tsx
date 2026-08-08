@@ -22,7 +22,7 @@ export function LinenSection() {
   }, []);
 
   return (
-    <section className="w-full py-16 md:py-24 lg:py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950">
+    <section className="w-full py-16 md:py-24 lg:py-section container mx-auto px-4 md:px-8 lg:px-xl bg-charcoal-950">
       
       <div className="text-center mb-4xl">
         <FadeIn delay={0.2}>
@@ -66,7 +66,7 @@ export function LinenSection() {
         {/* Right: Crossfade Gallery */}
         <div className="w-full">
           <FadeIn delay={0.4} duration={2}>
-            <div className="w-full aspect-[4/3] bg-charcoal-900 relative overflow-hidden">
+            <div className="w-full aspect-4/3 bg-charcoal-900 relative overflow-hidden">
               {LINEN_IMAGES.map((img, idx) => (
                 <div
                   key={img}

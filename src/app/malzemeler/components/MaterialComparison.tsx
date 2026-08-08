@@ -11,7 +11,7 @@ const MATERIALS = [
 export function MaterialComparison() {
   return (
     <section className="w-full py-16 md:py-24 lg:py-section px-4 md:px-8 lg:px-xl bg-charcoal-950">
-      <div className="container mx-auto px-4 lg:px-0 max-w-5xl">
+      <div className="container mx-auto max-w-5xl">
         
         <div className="text-center mb-4xl">
           <RevealText 
@@ -38,7 +38,7 @@ export function MaterialComparison() {
                 <FadeIn delay={0.3 + (idx * 0.1)} className="flex items-center gap-md" role="presentation">
                   <span className="w-32 text-cream-500/50 font-sans text-xs tracking-widest uppercase" aria-hidden="true">Dayanıklılık</span>
                   <span className="sr-only">Dayanıklılık: Yüzde {mat.durability}</span>
-                  <div className="flex-1 h-[2px] bg-charcoal-800 relative" aria-hidden="true">
+                  <div className="flex-1 h-0.5 bg-charcoal-800 relative" aria-hidden="true">
                     <div 
                       className="absolute top-0 left-0 h-full bg-bronze-500" 
                       style={{ width: `${mat.durability}%` }} 
@@ -50,7 +50,7 @@ export function MaterialComparison() {
                 <FadeIn delay={0.4 + (idx * 0.1)} className="flex items-center gap-md" role="presentation">
                   <span className="w-32 text-cream-500/50 font-sans text-xs tracking-widest uppercase" aria-hidden="true">Sıcaklık Hissi</span>
                   <span className="sr-only">Sıcaklık Hissi: Yüzde {mat.warmth}</span>
-                  <div className="flex-1 h-[2px] bg-charcoal-800 relative" aria-hidden="true">
+                  <div className="flex-1 h-0.5 bg-charcoal-800 relative" aria-hidden="true">
                     <div 
                       className="absolute top-0 left-0 h-full bg-cream-500" 
                       style={{ width: `${mat.warmth}%` }} 
@@ -62,7 +62,7 @@ export function MaterialComparison() {
                 <FadeIn delay={0.5 + (idx * 0.1)} className="flex items-center gap-md" role="presentation">
                   <span className="w-32 text-cream-500/50 font-sans text-xs tracking-widest uppercase" aria-hidden="true">Nefes Alma</span>
                   <span className="sr-only">Nefes Alma Oranı: Yüzde {mat.breathability}</span>
-                  <div className="flex-1 h-[2px] bg-charcoal-800 relative" aria-hidden="true">
+                  <div className="flex-1 h-0.5 bg-charcoal-800 relative" aria-hidden="true">
                     <div 
                       className="absolute top-0 left-0 h-full bg-cream-500/50" 
                       style={{ width: `${mat.breathability}%` }} 

@@ -5,7 +5,7 @@ import { RevealText } from "@/components/motion/RevealText";
 export function HandCraftsmanship() {
   return (
     <section className="w-full py-16 md:py-32 lg:py-section px-4 md:px-8 lg:px-xl bg-charcoal-900">
-      <div className="container mx-auto px-4 lg:px-0">
+      <div className="container mx-auto">
         
         {/* Title Centered */}
         <div className="text-center mb-12 md:mb-16">
@@ -31,7 +31,7 @@ export function HandCraftsmanship() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-xl md:gap-4xl">
           
           <FadeIn delay={0.4} duration={2} className="md:mt-24">
-            <div className="w-full aspect-[3/4] bg-charcoal-950 relative overflow-hidden group">
+            <div className="w-full aspect-3/4 bg-charcoal-950 relative overflow-hidden group">
               <SmartImage 
                 src="/images/hand_craft_sanding.png"
                 alt="Usta eli zımpara detayı"
@@ -44,7 +44,7 @@ export function HandCraftsmanship() {
           </FadeIn>
 
           <FadeIn delay={0.6} duration={2}>
-            <div className="w-full aspect-[3/4] bg-charcoal-950 relative overflow-hidden group">
+            <div className="w-full aspect-3/4 bg-charcoal-950 relative overflow-hidden group">
               <SmartImage 
                 src="/images/hand_craft_oiling.png"
                 alt="Iskarpela ile detay işleme"
@@ -57,7 +57,7 @@ export function HandCraftsmanship() {
           </FadeIn>
 
           <FadeIn delay={0.8} duration={2} className="md:mt-48">
-            <div className="w-full aspect-[3/4] bg-charcoal-950 relative overflow-hidden group">
+            <div className="w-full aspect-3/4 bg-charcoal-950 relative overflow-hidden group">
               <SmartImage 
                 src="/images/hand_craft_chisel_v2.png"
                 alt="Ahşaba yağ cilası uygulama"

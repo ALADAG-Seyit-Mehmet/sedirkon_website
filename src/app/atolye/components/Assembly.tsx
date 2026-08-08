@@ -4,7 +4,7 @@ import { SmartImage } from "@/components/ui/SmartImage";
 
 export function Assembly() {
   return (
-    <section className="w-full py-16 md:py-24 lg:py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950 flex flex-col items-center">
+    <section className="w-full py-16 md:py-24 lg:py-section container mx-auto px-4 md:px-8 lg:px-xl bg-charcoal-950 flex flex-col items-center">
       
       <div className="text-center">
         <FadeIn delay={0.2}>

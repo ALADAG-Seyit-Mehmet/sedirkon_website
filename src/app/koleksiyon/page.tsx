@@ -86,7 +86,7 @@ export default async function CollectionPage(props: { searchParams?: Promise<{ k
       <section className="container mx-auto px-4 md:px-8 lg:px-xl">
         <div className="columns-1 md:columns-2 gap-x-xl md:gap-x-24">
           {filteredProducts.map((product, index) => {
-            const aspectClass = "aspect-[4/3]";
+            const aspectClass = "aspect-4/3";
 
             return (
               <FadeIn key={product.id} delay={0.2 + ((index % 4) * 0.1)} duration={1.2} className="break-inside-avoid mb-16 md:mb-24">

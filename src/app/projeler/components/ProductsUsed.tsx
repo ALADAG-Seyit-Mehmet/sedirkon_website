@@ -16,7 +16,7 @@ export function ProductsUsed({ productSlugs }: ProductsUsedProps) {
     .filter(Boolean) as typeof MOCK_PRODUCTS;
 
   return (
-    <section className="w-full py-16 md:py-24 lg:py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950 border-t border-cream-500/10 mt-xl">
+    <section className="w-full py-16 md:py-24 lg:py-section container mx-auto px-4 md:px-8 lg:px-xl bg-charcoal-950 border-t border-cream-500/10 mt-xl">
       
       <div className="mb-4xl text-center">
         <RevealText 

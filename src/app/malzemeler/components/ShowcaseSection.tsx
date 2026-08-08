@@ -9,7 +9,7 @@ export function ShowcaseSection() {
   const showcaseProducts = MOCK_PRODUCTS.slice(0, 3);
 
   return (
-    <section className="w-full py-16 md:py-24 lg:py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950">
+    <section className="w-full py-16 md:py-24 lg:py-section container mx-auto px-4 md:px-8 lg:px-xl bg-charcoal-950">
       
       <div className="mb-4xl flex flex-col items-center text-center">
         <FadeIn delay={0.2}>
@@ -36,7 +36,7 @@ export function ShowcaseSection() {
               href={`/koleksiyon/${product.slug}`}
               className="group flex flex-col md:flex-row items-center gap-xl md:gap-4xl"
             >
-              <div className={`w-full md:w-1/2 aspect-[16/9] md:aspect-[4/3] bg-charcoal-900 relative overflow-hidden ${idx % 2 !== 0 ? 'md:order-2' : ''}`}>
+              <div className={`w-full md:w-1/2 aspect-[16/9] md:aspect-4/3 bg-charcoal-900 relative overflow-hidden ${idx % 2 !== 0 ? 'md:order-2' : ''}`}>
                 <SmartImage 
                   src={product.images[0]} 
                   alt={product.title} 

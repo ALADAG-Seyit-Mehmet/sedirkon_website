@@ -41,7 +41,7 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
         
         {/* Project Meta overlay */}
         <div className="absolute bottom-0 left-0 w-full p-md md:p-xl flex flex-col md:flex-row justify-between items-end pb-xl md:pb-2xl">
-          <div className="container mx-auto px-4 lg:px-0">
+          <div className="container mx-auto">
             <RevealText 
               text={project.title} 
               as="h2" 

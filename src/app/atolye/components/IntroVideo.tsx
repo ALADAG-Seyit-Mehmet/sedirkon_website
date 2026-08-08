@@ -3,13 +3,13 @@ import { FadeIn } from "@/components/motion/FadeIn";
 
 export function IntroVideo() {
   return (
-    <section className="relative w-full h-[100dvh] overflow-hidden bg-charcoal-950 flex flex-col justify-end">
+    <section className="relative w-full h-dvh overflow-hidden bg-charcoal-950 flex flex-col justify-end">
       
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full z-0">
         <div className="absolute inset-0 bg-charcoal-950/50 z-10 pointer-events-none" />
         <video
-          src="/videos/hero-bg-v4.mp4"
+          src="/videos/hero-bg-v4-web.mp4"
           autoPlay
           loop
           muted
@@ -43,7 +43,7 @@ export function IntroVideo() {
       {/* Scroll indicator */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20">
         <FadeIn delay={2.5} duration={2}>
-          <div className="w-[1px] h-24 bg-cream-500/10 overflow-hidden relative">
+          <div className="w-px h-24 bg-cream-500/10 overflow-hidden relative">
             <div className="w-full h-full bg-cream-500 absolute top-0 left-0 origin-top animate-scroll-line" />
           </div>
         </FadeIn>

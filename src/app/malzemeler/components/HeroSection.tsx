@@ -46,7 +46,7 @@ export function HeroSection() {
       {/* Scroll indicator */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20">
         <FadeIn delay={2.5} duration={2}>
-          <div className="w-[1px] h-24 bg-cream-500/10 overflow-hidden relative">
+          <div className="w-px h-24 bg-cream-500/10 overflow-hidden relative">
             <div className="w-full h-full bg-cream-500 absolute top-0 left-0 origin-top animate-scroll-line" />
           </div>
         </FadeIn>

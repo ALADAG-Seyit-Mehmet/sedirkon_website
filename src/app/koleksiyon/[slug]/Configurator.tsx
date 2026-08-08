@@ -43,7 +43,7 @@ export default function Configurator({ images, title }: ConfiguratorProps) {
             key={img}
             onClick={() => setActiveIndex(idx)}
             className={cn(
-              "relative w-24 h-24 flex-shrink-0 bg-charcoal-900 overflow-hidden transition-all duration-300 border-2",
+              "relative w-24 h-24 shrink-0 bg-charcoal-900 overflow-hidden transition-all duration-300 border-2",
               activeIndex === idx ? "border-cream-500" : "border-transparent opacity-50 hover:opacity-100"
             )}
           >

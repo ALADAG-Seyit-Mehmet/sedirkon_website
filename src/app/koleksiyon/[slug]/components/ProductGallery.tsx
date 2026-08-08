@@ -14,7 +14,7 @@ export function ProductGallery({ product }: ProductGalleryProps) {
   if (!galleryImages || galleryImages.length === 0) return null;
 
   return (
-    <section className="w-full py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950">
+    <section className="w-full py-section container mx-auto px-4 md:px-8 lg:px-xl bg-charcoal-950">
       
       {/* Title */}
       <div className="mb-2xl md:mb-4xl">
@@ -38,7 +38,7 @@ export function ProductGallery({ product }: ProductGalleryProps) {
           const isFirstAndOdd = isOddTotal && idx === 0;
           
           let colSpan = isFirstAndOdd ? "md:col-span-2" : "md:col-span-1";
-          let aspectRatio = isFirstAndOdd ? "aspect-[21/9]" : "aspect-[4/3]";
+          let aspectRatio = isFirstAndOdd ? "aspect-21/9" : "aspect-4/3";
           
           return (
             <div key={idx} className={`${colSpan} flex flex-col justify-center`}>

@@ -94,7 +94,7 @@ export function Cursor() {
       {/* Outer Ring */}
       <div 
         ref={cursorRef}
-        className="fixed top-0 left-0 w-10 h-10 -ml-5 -mt-5 rounded-full border border-cream-500/50 pointer-events-none z-[999999] flex items-center justify-center opacity-0 mix-blend-difference"
+        className="fixed top-0 left-0 w-10 h-10 -ml-5 -mt-5 rounded-full border border-cream-500/50 pointer-events-none z-999999 flex items-center justify-center opacity-0 mix-blend-difference"
       >
         <div ref={cursorTextRef} className="absolute inset-0 flex items-center justify-center opacity-0 text-charcoal-950">
           {cursorType === "video" && <Play size={12} fill="currentColor" />}
@@ -106,7 +106,7 @@ export function Cursor() {
       {/* Inner Dot */}
       <div 
         ref={cursorDotRef}
-        className="fixed top-0 left-0 w-2 h-2 -ml-1 -mt-1 bg-cream-500 rounded-full pointer-events-none z-[999999] opacity-0 mix-blend-difference"
+        className="fixed top-0 left-0 w-2 h-2 -ml-1 -mt-1 bg-cream-500 rounded-full pointer-events-none z-999999 opacity-0 mix-blend-difference"
       />
     </>
   );

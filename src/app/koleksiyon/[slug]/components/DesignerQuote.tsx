@@ -9,7 +9,7 @@ export function DesignerQuote({ product }: DesignerQuoteProps) {
   if (!product.designerQuote) return null;
 
   return (
-    <section className="w-full py-16 md:py-32 lg:py-section px-4 md:px-8 lg:px-xl container mx-auto px-4 lg:px-0 bg-charcoal-950 flex justify-center text-center">
+    <section className="w-full py-16 md:py-32 lg:py-section container mx-auto px-4 md:px-8 lg:px-xl bg-charcoal-950 flex justify-center text-center">
       
       <FadeIn delay={0.2} duration={2} className="max-w-4xl relative">
         {/* Oversized decorative quote mark */}
@@ -22,7 +22,7 @@ export function DesignerQuote({ product }: DesignerQuoteProps) {
         </p>
         
         <div className="mt-xl md:mt-2xl">
-          <div className="w-8 h-[1px] bg-bronze-500 mx-auto mb-md" />
+          <div className="w-8 h-px bg-bronze-500 mx-auto mb-md" />
           <p className="text-cream-500/50 font-sans text-sm tracking-[0.3em] uppercase">
             Sedirkon Studio
           </p>
