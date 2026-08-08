@@ -19,7 +19,22 @@ import { ShowroomModel } from "./ShowroomModel";
 
 export default function ShowroomScene() {
   return (
-    <Canvas shadows={{ type: THREE.PCFShadowMap }} gl={{ antialias: true, alpha: true }}>
+    <Canvas 
+      shadows={{ type: THREE.PCFShadowMap }} 
+      gl={{ 
+        antialias: true, 
+        alpha: true,
+        powerPreference: "high-performance",
+        failIfMajorPerformanceCaveat: false
+      }}
+      onCreated={({ gl }) => {
+        // Prevent random context loss where possible, and handle it gracefully
+        gl.getContext().canvas.addEventListener("webglcontextlost", (e) => {
+          e.preventDefault();
+          console.warn("WebGL Context Lost - gracefully handling");
+        }, false);
+      }}
+    >
       <Suspense fallback={null}>
         <BreathingCamera />
         <CinematicLighting />
