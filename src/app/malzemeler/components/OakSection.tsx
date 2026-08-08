@@ -12,7 +12,7 @@ export function OakSection() {
         {/* Left: Macro Image (Opposite of Walnut) */}
         <div className="md:col-span-7">
           <MaskReveal direction="left-to-right" duration={1.8}>
-            <div className="w-full aspect-[4/5] md:aspect-square bg-charcoal-900 relative">
+            <div className="w-full aspect-4/5 md:aspect-square bg-charcoal-900 relative">
               <SmartImage 
                 src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=90&w=1200"
                 alt="Meşe Ağacı Dokusu"
