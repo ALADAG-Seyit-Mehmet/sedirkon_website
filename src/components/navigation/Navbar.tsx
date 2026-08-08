@@ -106,11 +106,13 @@ export default function Navbar() {
 
   // Handle smooth scroll to section via Lenis
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // Her durumda mobil menüyü kapat
+    setIsMobileMenuOpen(false);
+    
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const w = window as any;
     if (href.startsWith("/#") && typeof window !== "undefined" && w.lenis) {
       e.preventDefault();
-      setIsMobileMenuOpen(false);
       const targetId = href.replace("/#", "");
       const ease = (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t));
       if (targetId === "") {
